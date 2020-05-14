@@ -1,12 +1,11 @@
-<p>tv-shows-display works!</p>
 <table style="width:100%">
   <tr>
     <th>Show Name</th>
+    <th>Image</th>
     <th>Language</th>
     <th>Schedule</th>
     <th>Rating</th>
     <th>Network</th>
-    <th>Image</th>
     <th>Summary</th>
   </tr>
   <!--ngFor is a directive that iterates over collection of data.used to customize data display-->
@@ -17,9 +16,6 @@
     <td>{{tvshowInfo.scheduleDays[0]}}</td>
     <td>{{tvshowInfo.rating}}</td>
     <td>{{tvshowInfo.networkname}}</td>
-
     <td>{{tvshowInfo.summary}}</td>
-
-
   </tr>
 </table>

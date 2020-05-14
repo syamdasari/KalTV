@@ -16,7 +16,7 @@ export interface ITvShowsDisplayData {
     },
     network:
     {
-      name:string
+      name: string
     },
     webChannel:
     {
@@ -24,7 +24,7 @@ export interface ITvShowsDisplayData {
     },
     image:
     {
-      medium:string
+      medium: string
     },
     summary: string
   }
