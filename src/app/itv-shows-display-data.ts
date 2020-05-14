@@ -26,7 +26,7 @@ export interface ITvShowsDisplayData {
     {
       medium: string
     },
-    summary: string
+    
   }
 
 }

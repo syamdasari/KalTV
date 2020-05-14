@@ -6,7 +6,6 @@
     <th>Schedule</th>
     <th>Rating</th>
     <th>Network</th>
-    <th>Summary</th>
   </tr>
   <!--ngFor is a directive that iterates over collection of data.used to customize data display-->
   <tr *ngFor="let tvshowInfo of currentdata">
@@ -16,6 +15,5 @@
     <td>{{tvshowInfo.scheduleDays[0]}}</td>
     <td>{{tvshowInfo.rating}}</td>
     <td>{{tvshowInfo.networkname}}</td>
-    <td>{{tvshowInfo.summary}}</td>
   </tr>
 </table>
