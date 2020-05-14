@@ -13,7 +13,6 @@ export class TvShowService {
 
   constructor(private httpClient: HttpClient) { }
 
-
   //function to get show details from external api link
   getShowDetails(name: string): Observable<IarrayTvShowsDisplay>{
     console.log('in get show details function');
