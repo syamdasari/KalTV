@@ -8,13 +8,15 @@ import { TvShowService } from './tv-show.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { SampleShowsComponent } from './sample-shows/sample-shows.component';
+import { SearchByNameComponent } from './search-by-name/search-by-name.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TvShowsDisplayComponent,
     ContactPageComponent,
-    SampleShowsComponent
+    SampleShowsComponent,
+    SearchByNameComponent
   ],
   imports: [
     BrowserModule,

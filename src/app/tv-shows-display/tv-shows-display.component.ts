@@ -12,7 +12,7 @@ currentdata: IarrayTvShowsDisplay;
   constructor(private tvshowservice: TvShowService) { }
 
   ngOnInit(): void {
-    this.tvshowservice.getShowDetails('girls').subscribe(data => this.currentdata = data);
+    this.tvshowservice.getShowDetails('marvel').subscribe(data => this.currentdata = data);
   }
 
 }

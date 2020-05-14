@@ -1,19 +1,28 @@
-<table style="width:100%">
-  <tr style="border:10px;">
+<table class="movie-list" *ngIf="currentdata; else elseBlock" style="width:100%">
+  <tr>
     <th>Show Name</th>
     <th>Image</th>
     <th>Language</th>
     <th>Schedule</th>
     <th>Rating</th>
     <th>Network</th>
+    <th>Summary</th>
   </tr>
   <!--ngFor is a directive that iterates over collection of data.used to customize data display-->
   <tr *ngFor="let tvshowInfo of currentdata">
     <td>{{tvshowInfo.name |uppercase}}</td>
     <td><img [src] ='tvshowInfo.image' sizes="60px" width="60px" /></td>
     <td>{{tvshowInfo.language}}</td>
-    <td>{{tvshowInfo.scheduleDays[0]}}</td>
+    <td>
+      {{tvshowInfo.scheduleDays[0]}}
+      <span *ngIf='tvshowInfo.scheduleTime'>@{{tvshowInfo.scheduleTime}}</span>
+    </td>
     <td>{{tvshowInfo.rating}}</td>
     <td>{{tvshowInfo.networkname}}</td>
+    
+    <td>
+      <div id="show-summary">{{tvshowInfo.summary}}</div>
+    </td>
   </tr>
 </table>
+<ng-template #elseBlock></ng-template>

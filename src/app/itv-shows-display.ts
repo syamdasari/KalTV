@@ -7,6 +7,7 @@ export interface ITvShowsDisplay {
   scheduleDays: string[],
   rating: number,
   image: string,
-  networkname: string
+  networkname: string,
+  summary:string
 }
 export interface IarrayTvShowsDisplay extends Array<ITvShowsDisplay>{}
