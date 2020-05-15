@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { SampleShowsComponent } from './sample-shows/sample-shows.component';
 import { SearchByNameComponent } from './search-by-name/search-by-name.component';
+import { ScheduleComponent } from './schedule/schedule.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SearchByNameComponent } from './search-by-name/search-by-name.component
     TvShowsDisplayComponent,
     ContactPageComponent,
     SampleShowsComponent,
-    SearchByNameComponent
+    SearchByNameComponent,
+    ScheduleComponent
   ],
   imports: [
     BrowserModule,
