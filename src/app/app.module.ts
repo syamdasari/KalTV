@@ -10,6 +10,8 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
 import { SampleShowsComponent } from './sample-shows/sample-shows.component';
 import { SearchByNameComponent } from './search-by-name/search-by-name.component';
 import { ScheduleComponent } from './schedule/schedule.component';
+import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ScheduleComponent } from './schedule/schedule.component';
     ContactPageComponent,
     SampleShowsComponent,
     SearchByNameComponent,
-    ScheduleComponent
+    ScheduleComponent,
+    SignUpPageComponent
+
   ],
   imports: [
     BrowserModule,
