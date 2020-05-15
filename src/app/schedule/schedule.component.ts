@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ISchedule } from '../ischedule';
 
 @Component({
   selector: 'app-schedule',
@@ -6,8 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./schedule.component.css']
 })
 export class ScheduleComponent implements OnInit {
-
-  constructor() { }
+  schedule: ISchedule;
+  schedules: ISchedule[];
+  constructor() {
+    this.schedule = {
+    showName: 'jhggfiuhgi',
+    airtime: 'sjgfffffhhh',
+    networkName: 'jhgffdfd',
+    image: '',
+    summary: 'kkjhhjghgffdfg jhghfgfd'
+    }
+    this.schedules = [this.schedule];
+   }
 
   ngOnInit(): void {
   }
