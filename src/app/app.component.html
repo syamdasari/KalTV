@@ -4,37 +4,49 @@
     }
   h1 {background-color: red;}
   p {color: blue;}
+  table.optionsList { text-align: left;}
+  td.optionValue {  width: 500px; vertical-align: top;}
   </style>
 <body>
 <div style="text-align: center;">
-<h3>
-<tr>
-  <app-sample-shows></app-sample-shows>
-  </tr>
-  <tr>
-  <app-tv-shows-display>  </app-tv-shows-display>
-</tr>
-<tr>
-  <app-contact-page> </app-contact-page>
-</tr>
-<tr>
-  <app-schedule> </app-schedule>
-</tr>
-<tr>
-  <app-sign-up-page></app-sign-up-page>
-</tr>
-</h3>
+  <table>
+    <tr>
+      <app-sample-shows></app-sample-shows>
+    </tr>
+    <tr>
+      <table class='optionsList'>
+          <tr>
+            <td class= 'optionValues'>
+              <ul>
+                <li><a href='Shows'> Shows</a> </li>
+                <li><a href='Movies'> Movies</a> </li>
+                <li><a href='Schedules'> Schedules</a></li>
+                <li><a href='Conatact Us'> Contact Us</a> </li>
+                <li><a href='Billing'> Billing </a></li>
+              </ul>
+            </td>
+            <td>
+              <app-tv-shows-display>  </app-tv-shows-display>
+            </td>
+          </tr>
+
+      </table>
+    </tr>
+    <tr>
+      <app-schedule> </app-schedule>
+    </tr>
+    <tr>
+      <app-sign-up-page></app-sign-up-page>
+    </tr>
+</table>
 </div>
 
 <div style="text-align: center;">
   <h1>
     TV Show App Sign Up Page
   </h1>
-  <app-sign-up-page></app-sign-up-page>
-</div>
-
+ </div>
 <footer>
   <p>Contact : <a href="mailto:teamrockers@example.com">teamrockers@example.com</a></p>
 </footer>
-
 </body>
