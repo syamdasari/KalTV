@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ISchedule } from '../ischedule';
+import { ScheduleService } from '../schedule.service';
 
 @Component({
   selector: 'app-schedule',
@@ -9,7 +10,8 @@ import { ISchedule } from '../ischedule';
 export class ScheduleComponent implements OnInit {
   schedule: ISchedule;
   schedules: ISchedule[];
-  constructor() {
+  schedules$ = this.scheduleService.getSchedules("US", "2014-12-01")
+  constructor(private scheduleService: ScheduleService) {
     this.schedule = {
     showName: 'jhggfiuhgi',
     airtime: 'sjgfffffhhh',
