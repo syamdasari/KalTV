@@ -1,4 +1,5 @@
 export interface IShowImages {
-  id: number;
-  image: string;
+  showId: Number,
+  showImage: string,
+  showDesc: string
 }

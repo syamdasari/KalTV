@@ -11,7 +11,7 @@ import { SampleShowsComponent } from './sample-shows/sample-shows.component';
 import { SearchByNameComponent } from './search-by-name/search-by-name.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
-
+import { ShowSampleImagesService } from './show-sample-images.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
     SampleShowsComponent,
     SearchByNameComponent,
     ScheduleComponent,
-    SignUpPageComponent
+    SignUpPageComponent,
+    SampleShowsComponent
 
   ],
   imports: [
@@ -29,7 +30,8 @@ import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [TvShowService],
+  providers: [TvShowService, ShowSampleImagesService],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }
