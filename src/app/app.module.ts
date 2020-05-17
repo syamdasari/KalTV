@@ -12,6 +12,7 @@ import { SearchByNameComponent } from './search-by-name/search-by-name.component
 import { ScheduleComponent } from './schedule/schedule.component';
 import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
 import { ScheduleService } from './schedule.service';
+import { ShowSampleImagesService } from './show-sample-images.service';
 
 @NgModule({
   declarations: [
@@ -21,14 +22,16 @@ import { ScheduleService } from './schedule.service';
     SampleShowsComponent,
     SearchByNameComponent,
     ScheduleComponent,
-    SignUpPageComponent
+    SignUpPageComponent,
+    SampleShowsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [TvShowService, ScheduleService],
+
+  providers: [TvShowService, ScheduleService, ShowSampleImagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
