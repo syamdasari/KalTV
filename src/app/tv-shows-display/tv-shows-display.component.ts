@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { IarrayTvShowsDisplay } from '../itv-shows-display';
+import { Component, OnInit, Input} from '@angular/core';
+import { ITvShowsDisplay, IarrayTvShowsDisplay } from '../itv-shows-display';
 import { TvShowService } from '../tv-show.service';
+import { ITvShowService } from '../itv-show-service';
 
 @Component({
   selector: 'app-tv-shows-display',
@@ -8,11 +9,11 @@ import { TvShowService } from '../tv-show.service';
   styleUrls: ['./tv-shows-display.component.css']
 })
 export class TvShowsDisplayComponent implements OnInit {
-currentdata: IarrayTvShowsDisplay;
+@Input() currentdata: IarrayTvShowsDisplay;
   constructor(private tvshowservice: TvShowService) { }
 
   ngOnInit(): void {
-    this.tvshowservice.getShowDetails('marvel').subscribe(data => this.currentdata = data);
+   // this.tvshowservice.getShowDetails('marvel').subscribe(data => this.currentdata = data);
   }
 
 }
