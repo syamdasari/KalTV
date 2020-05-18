@@ -20,6 +20,8 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { RegisterPageComponent } from './register-page/register-page.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 //import { MatFlexLayout } from ''
 
 
@@ -33,7 +35,9 @@ import { MatButtonModule } from '@angular/material/button';
     ScheduleComponent,
     SignUpPageComponent,
     SampleShowsComponent,
-    SearchByNameComponent
+    SearchByNameComponent,
+    RegisterPageComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
