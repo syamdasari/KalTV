@@ -12,6 +12,10 @@ import { SearchByNameComponent } from './search-by-name/search-by-name.component
 import { ScheduleComponent } from './schedule/schedule.component';
 import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
 import { ShowSampleImagesService } from './show-sample-images.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule} from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +32,10 @@ import { ShowSampleImagesService } from './show-sample-images.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatToolbarModule,
   ],
   providers: [TvShowService, ShowSampleImagesService],
   bootstrap: [AppComponent]

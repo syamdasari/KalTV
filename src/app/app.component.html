@@ -11,23 +11,21 @@
 <div style="text-align: center;">
   <table>
     <tr>
-      <app-sample-shows></app-sample-shows>
+         <!-- <app-sample-shows></app-sample-shows> -->
     </tr>
     <tr>
       <table class='optionsList'>
-          <tr>
-            <td class= 'optionValues'>
-              <ul>
-                <li><a href='Search'> <img src='./images/SearchImage.JPG' alt="Search" width="600" height="400"></a></li>
-                <li><a href='Shows'> Shows</a> </li>
-                <li><a href='Movies'> Movies</a> </li>
-                <li><a href='Schedules'> Schedules</a></li>
-                <li><a href='Conatact Us'> Contact Us</a> </li>
-                <li><a href='Billing'> Billing </a></li>
-              </ul>
+          <tr style="text-align:left">
+            <td class= 'optionValues' vertical-align='top'>
+                <button mat-mat-raised-button color='warn' width= '300px'> Search</button><br>
+                <button mat-mat-raised-button color='warn'>Shows</button><br>
+                <button mat-mat-raised-button color='warn'> Movies</button><br>
+                <button mat-mat-raised-button color='warn'>Schedules</button>
+                <button mat-mat-raised-button color='warn'> Contact Us</button>
+                <button mat-mat-raised-button color='warn'>Billing </button>
             </td>
             <td>
-              <app-tv-shows-display>  </app-tv-shows-display>
+              <app-tv-shows-display></app-tv-shows-display>
             </td>
           </tr>
 

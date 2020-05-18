@@ -10,16 +10,16 @@ import { ShowSampleImagesService } from '../show-sample-images.service';
 })
 export class SampleShowsComponent implements OnInit {
   sampleShowImage: IShowImages;
-  constructor() {
-    this.sampleShowImage = {
-    showId: 1,
-    showImage: 'http://static.tvmaze.com/uploads/images/medium_portrait/0/43.jpg',
-    showDesc: 'Oiginal Untouched'
-    };
-  }
-  // constructor( private showSampleImagesService: ShowSampleImagesService ){
+  // constructor() {
+  //   this.sampleShowImage = {
+  //   showId: 1,
+  //   showImage: 'http://static.tvmaze.com/uploads/images/medium_portrait/0/43.jpg',
+  //   showDesc: 'Original Untouched'
+  //   };
   // }
+   constructor( private showSampleImagesService: ShowSampleImagesService ){
+   }
   ngOnInit(): void {
-//    this.showSampleImagesService.getShowImage().subscribe(data => this.sampleShowImage = data);
+   this.showSampleImagesService.getShowImage().subscribe(data => this.sampleShowImage = data);
   }
 }

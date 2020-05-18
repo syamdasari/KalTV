@@ -18,7 +18,6 @@ interface IShowSampleImagesData {
     }
   ];
 }
-
 @Injectable({
   providedIn: 'root'
 })
@@ -37,7 +36,7 @@ export class ShowSampleImagesService {
   {
       return {
         showId: data.shows[0].id,
-        showImage:data.shows[0].resolution.original.url,
+        showImage: data.shows[0].resolution.original.url,
         showDesc: 'Test'
       };
   }
