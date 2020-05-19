@@ -37,6 +37,8 @@ export class TvShowService implements ITvShowService {
 
 
     let  tvShowDisplayArray: IarrayTvShowsDisplay = new Array();
+
+    if(len){
     for (var i = 0  ; i < len ; i++)
        {
          tvShowDisplayArray.push({
@@ -52,8 +54,8 @@ export class TvShowService implements ITvShowService {
            summary: data[i].show.summary != null ? data[i].show.summary.replace(/<[^>]*>?/gm, '') : "No Summary",
            //summary: data[i].show.summary.replace(/<\/p>/gm, "").replace(/<p>/gm,"").replace(/<b>/gm,"").replace(/<\/b>/gm,""),
          } as ITvShowsDisplay);
-         console.log(data[i].show.rating + ':');
-         console.log("summary"+data[i].show.summary);
+         //console.log(data[i].show.rating + ':');
+         //console.log("summary"+data[i].show.summary);
          }
          return tvShowDisplayArray;
-        }}
+        }}}
