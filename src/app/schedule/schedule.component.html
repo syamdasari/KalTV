@@ -6,12 +6,12 @@
     <td>image</td>
     <td>summary</td>
   </tr>
-  <tr>
-    <td>{{schedule.showName}}</td>
-    <td>{{schedule.airtime}}</td>
-    <td>{{schedule.networkName}}</td>
-    <td>{{schedule.image}}</td>
-    <td>{{schedule.summary}}</td>
+  <tr *ngFor="let show of localData">
+    <td>{{show.showName}}</td>
+    <td>{{show.airtime}}</td>
+    <td>{{show.networkName}}</td>
+    <td><img src="{{show.image}}" alt="{{show.showName}}"></td>
+    <td>{{show.summary}}</td>
   </tr>
 </table>
 

@@ -8,21 +8,16 @@ import { ScheduleService } from '../schedule.service';
   styleUrls: ['./schedule.component.css']
 })
 export class ScheduleComponent implements OnInit {
-  schedule: ISchedule;
-  schedules: ISchedule[];
-  schedules$ = this.scheduleService.getSchedules("US", "2014-12-01")
-  constructor(private scheduleService: ScheduleService) {
-    this.schedule = {
-    showName: 'jhggfiuhgi',
-    airtime: 'sjgfffffhhh',
-    networkName: 'jhgffdfd',
-    image: '',
-    summary: 'kkjhhjghgffdfg jhghfgfd'
-    }
-    this.schedules = [this.schedule];
-   }
+  localData: ISchedule[]
+     constructor(private scheduleService: ScheduleService) {    }
+
 
   ngOnInit(): void {
+    this.scheduleService.getScheduleDetails('US', '2014-12-01')
+    .subscribe((data) =>
+      this.localData = data
+      )
+
   }
 
 }
