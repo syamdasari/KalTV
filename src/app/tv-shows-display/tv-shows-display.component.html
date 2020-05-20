@@ -31,7 +31,7 @@
 <ng-template #elseBlock>{{itemNotFound}}</ng-template>
 -->
 <div *ngIf='currentdata && !itemNotFound; else elseBlock'>
-  <table mat-table [dataSource]='currentdata' class="mat=elevation-z8" height:200px width="100%">
+  <table mat-table [dataSource]='currentdata' class="mat=elevation-z8" width="100%">
 
     <ng-container matColumnDef='name'>
       <mat-header-cell *matHeaderCellDef style="font-size: 15px"><b>Show Name</b></mat-header-cell>

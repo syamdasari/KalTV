@@ -23,7 +23,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-
+import {MatDialogModule} from '@angular/material/dialog';
+import { DetailsDisplayComponent } from './details-display/details-display.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     SampleShowsComponent,
     SearchByNameComponent,
     RegisterPageComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    DetailsDisplayComponent
 
   ],
   imports: [
@@ -55,9 +57,12 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     ReactiveFormsModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatTableModule
-
-  ],
+    MatTableModule,MatDialogModule
+    
+],
+exports:[
+  MatDialogModule
+],
 
 
   providers: [TvShowService, ScheduleService, ShowSampleImagesService],

@@ -29,46 +29,14 @@
       </table>
     </tr>
   </table>
-
-
-    <mat-toolbar color="primary">
-      TV Show
-    </mat-toolbar>
-  <table class="showSearchTableByName">
+  <mat-toolbar color="primary">
+    TV Show
+  </mat-toolbar>
+  <table>
     <tr>
-      <td>
-        <div style="font-size: 20px; margin: 40px;">
-          <div style="color: #002699;">Enter the name of the show that you want to search.</div>
-          <div style="margin: 30px;">
-            <app-search-by-name style="color: #002699;" (searchEvent)="doSearch($event)"></app-search-by-name>
-          </div>
-        </div>
-        <!--<div style="font-size: 15px; line-height: 30px;">
-          <div>Enter the name of show that you want to search</div>
-          <div>
-            <mat-card>
-            <app-search-by-name (searchEvent)="doSearch($event)"></app-search-by-name>
-          </mat-card>
-          </div>
-        </div>-->
-      </td>
-    </tr>
+      <button mat-button (click)="openDialog()">Click here to Search by Show Name</button>
+  </tr>
   </table>
-
-  <table class="gotDetailsByNameTable" style="width: 100%;">
-    <tr>
-      <td>
-       <!-- <div class="scrollit">-->
-
-           <app-tv-shows-display [currentdata]= "tvshowsdisplay" [itemNotFound] = "errorMessage">  </app-tv-shows-display>
-
-       <!--</div>-->
-     </td>
-    </tr>
-  </table>
-
-
-
   <table>
     <tr>
       <td>
