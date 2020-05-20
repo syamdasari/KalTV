@@ -19,11 +19,13 @@ import { MatCardModule } from '@angular/material/card';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-//import { MatFlexLayout } from ''
+import {MatDialogModule} from '@angular/material/dialog';
+import { DetailsDisplayComponent } from './details-display/details-display.component';
 
 
 @NgModule({
@@ -38,7 +40,9 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     SampleShowsComponent,
     SearchByNameComponent,
     RegisterPageComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    DetailsDisplayComponent
+
   ],
   imports: [
     BrowserModule,
@@ -54,8 +58,14 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     ReactiveFormsModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatTabsModule,
-  ],
+    MatTableModule,
+    MatDialogModule
+
+],
+exports:[
+  MatDialogModule
+],
+
 
   providers: [TvShowService, ScheduleService, ShowSampleImagesService],
   bootstrap: [AppComponent]

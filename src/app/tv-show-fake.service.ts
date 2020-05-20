@@ -26,7 +26,7 @@ export class TvShowFakeService implements ITvShowService{
         rating:6.9,
         image:'',
         summary:'dummy summary',
-        networkname: 'hbo'
+        //networkname: 'hbo'
     }as ITvShowsDisplay)
   }
   return of(tvShowDisplayArrayfake);
