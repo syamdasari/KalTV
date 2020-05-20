@@ -1,0 +1,18 @@
+
+<mat-dialog-content>
+    <div style="font-size: 20px; margin: 40px;">
+      <div style="color: #002699;">Enter the name of the show that you want to search.</div>
+      <div style="margin: 30px;">
+       <app-search-by-name style="color: #002699;" (searchEvent)="doSearch($event)"></app-search-by-name>
+      </div>
+    </div>
+
+   <!-- <div class="scrollit">-->
+
+       <app-tv-shows-display [currentdata]= "tvshowsdisplay" [itemNotFound] = "errorMessage">  </app-tv-shows-display>
+
+   <!--</div>-->
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <!--<button class="mat-raised-button"(click)="close()">Close</button>-->
+</mat-dialog-actions>
