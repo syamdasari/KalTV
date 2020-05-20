@@ -1,17 +1,18 @@
 <table border="1">
+  <><H1>TV Schedule</H1>
   <tr>
-    <td>showname</td>
-    <td>airtime</td>
-    <td>networkname</td>
-    <td>image</td>
-    <td>summary</td>
+    <td>Show Name</td>
+    <td>Airtime</td>
+    <td>Network</td>
+    <td>Image</td>
+    <td>Summary</td>
   </tr>
   <tr *ngFor="let show of localData">
     <td>{{show.showName}}</td>
     <td>{{show.airtime}}</td>
     <td>{{show.networkName}}</td>
     <td><img src="{{show.image}}" alt="{{show.showName}}"></td>
-    <td>{{show.summary}}</td>
+    <td [innerHTML]="show.summary"></td>
   </tr>
 </table>
 

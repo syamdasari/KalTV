@@ -13,7 +13,7 @@ export class ScheduleComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.scheduleService.getScheduleDetails('US', '2014-12-01')
+    this.scheduleService.getScheduleDetails('US', '2020-05-05')
     .subscribe((data) =>
       this.localData = data
       )
