@@ -1,4 +1,4 @@
-<table *ngIf="currentdata; else elseBlock" style="width:100%">
+<!--<table *ngIf="currentdata; else elseBlock" style="width:100%">
   <tr>
     <th>Show Name</th>
     <th>Image</th>
@@ -9,7 +9,9 @@
     <th>Summary</th>
   </tr>
   <!--ngFor is a directive that iterates over collection of data.used to customize data display-->
+<!--
   <tr *ngFor="let tvshowInfo of currentdata">
+
     <td>{{tvshowInfo.name |uppercase}}</td>
     <td><img [src] ='tvshowInfo.image' sizes="60px" width="60px" /></td>
     <td>{{tvshowInfo.language}}</td>
@@ -23,6 +25,53 @@
     <td>
       <div id="show-summary">{{tvshowInfo.summary}}</div>
     </td>
+
   </tr>
 </table>
 <ng-template #elseBlock>{{itemNotFound}}</ng-template>
+-->
+<div *ngIf='currentdata && !itemNotFound; else elseBlock'>
+  <table mat-table [dataSource]='currentdata' class="mat=elevation-z8" height:200px width="100%">
+
+    <ng-container matColumnDef='name'>
+      <mat-header-cell *matHeaderCellDef style="font-size: 15px"><b>Show Name</b></mat-header-cell>
+      <mat-cell *matCellDef='let current'>{{current.name}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef='language'>
+      <mat-header-cell *matHeaderCellDef style="font-size: 15px">Language</mat-header-cell>
+      <mat-cell *matCellDef='let current'>{{current.language}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef='scheduleTime'>
+      <mat-header-cell *matHeaderCellDef style="font-size: 15px">Telecast Time</mat-header-cell>
+      <mat-cell *matCellDef='let current'>{{current.scheduleTime}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef='scheduleDays'>
+      <mat-header-cell *matHeaderCellDef style="font-size: 15px">Telecast Days</mat-header-cell>
+      <mat-cell *matCellDef='let current'>{{current.scheduleDays}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef='image'>
+      <mat-header-cell *matHeaderCellDef style="font-size: 15px">Image</mat-header-cell>
+      <mat-cell *matCellDef='let current'><img [src]='current.image' width='80px'/></mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef='summary'>
+      <mat-header-cell *matHeaderCellDef style="font-size: 15px">Summary</mat-header-cell>
+      <mat-cell *matCellDef='let current'>{{current.summary}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef='url'>
+      <mat-header-cell *matHeaderCellDef style="font-size: 15px">For more info...</mat-header-cell>
+      <mat-cell *matCellDef='let current'><a href="{{current.url}}">...click here</a></mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </table>
+</div>
+<div>
+  <ng-template #elseBlock>{{itemNotFound}}</ng-template>
+</div>

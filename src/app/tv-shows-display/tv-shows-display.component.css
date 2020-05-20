@@ -1,4 +1,4 @@
-.movie-list, th {
+/*.movie-list, th {
   border: 1px solid rgb(211, 211, 228);
 
 }
@@ -20,7 +20,8 @@ tr {
 
 table {
   background-color: powderblue;
-  border-collapse: collapse;
+  border-collapse: collaps;
+  max-width: 100%;
 }
 
 tr:hover {
@@ -38,4 +39,26 @@ table {
 #show-summary {
   max-height: 200px;
   overflow: hidden;
+}
+.scrollit {
+  overflow:scroll;
+  height:100px;
+}
+
+
+*/
+mat-table{
+  
+  overflow:auto;
+}
+mat-cell{
+  color: #002699;
+}
+mat-cell:first-of-type {
+  font-weight: bold;
+}
+.mat-header-cell{
+  font-weight: bold;
+  color: #002699;
+  text-transform: uppercase;
 }
