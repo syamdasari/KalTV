@@ -20,6 +20,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTabsModule } from '@angular/material/tabs';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 //import { MatFlexLayout } from ''
@@ -44,10 +45,6 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-<<<<<<< HEAD
-    MatButtonModule,
-    MatToolbarModule,
-=======
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
@@ -56,8 +53,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatFormFieldModule
->>>>>>> dd65dc9cab8c677529282ea83c0af2f44f08a12f
+    MatFormFieldModule,
+    MatTabsModule,
   ],
 
   providers: [TvShowService, ScheduleService, ShowSampleImagesService],

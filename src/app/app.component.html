@@ -6,70 +6,44 @@
   h1 {background-color: red;}
   p {color: blue;}
   </style>
-<body>
-<div style="text-align: center;">
-  <table>
-    <tr>
-         <!-- <app-sample-shows></app-sample-shows> -->
-    </tr>
-    <tr>
-      <table class='optionsList'>
-          <tr style="text-align:left">
-            <td class= 'optionValues' vertical-align='top'>
-                <button mat-mat-raised-button color='warn' width= '300px'> Search</button><br>
-                <button mat-mat-raised-button color='warn'>Shows</button><br>
-                <button mat-mat-raised-button color='warn'> Movies</button><br>
-                <button mat-mat-raised-button color='warn'>Schedules</button>
-                <button mat-mat-raised-button color='warn'> Contact Us</button>
-                <button mat-mat-raised-button color='warn'>Billing </button>
-            </td>
-            <td>
-              <app-tv-shows-display></app-tv-shows-display>
-            </td>
-          </tr>
-
-      </table>
-    </tr>
-
+<body style="text-align:center">
+  <mat-tab-group>
+    <mat-tab label="Search">
+      <h1>Search </h1>
       <div style="font-size:15px; line-height:30px;">
         <div> Enter your desired Show Name</div>
          <div>
           <app-search-by-name (searchEvent)="doSearch($event)"></app-search-by-name>
          </div>
       </div>
-    <tr>
-      <mat-card color="secondary">
+    </mat-tab>
+    <mat-tab label="Shows">
+      <h1>Shows</h1>
+      <p>Shows List </p>
+    </mat-tab>
+    <mat-tab label="Schedules">
+      <h1>Schedules </h1>
+      <app-schedule> </app-schedule>
+    </mat-tab>
+    <mat-tab label="Login/Sign-in">
+      <h1>Login/Sign in  </h1>
+      <app-sign-up-page></app-sign-up-page>
+    </mat-tab>
+    <mat-tab label="Register/Sign-up">
+      <h1>Register/Sign up </h1>
+      <app-register-page></app-register-page>
+    </mat-tab>
+  </mat-tab-group>
+     <mat-card color="secondary">
        <app-tv-shows-display [currentdata]= "tvshowsdisplay" [itemNotFound] = "errorMessage">  </app-tv-shows-display>
      </mat-card>
-    </tr>
-    <tr>
-      <app-schedule> </app-schedule>
-    </tr>
-    <tr>
-      <app-sign-up-page></app-sign-up-page>
-    </tr>
-    <tr>
-      <app-register-page></app-register-page>
-    </tr>
-    <tr>
-      <app-forgot-password></app-forgot-password>
-    </tr>
-</table>
-  <app-search-by-name (searchEvent) = "doSearch($event)"></app-search-by-name>
-  <tr>
-    <mat-card color="secondary">
+     <app-forgot-password></app-forgot-password>
+   <mat-card color="secondary">
      <app-tv-shows-display [currentdata]= "tvshowsdisplay">  </app-tv-shows-display>
    </mat-card>
-</tr>
-<tr>
-  <app-contact-page> </app-contact-page>
-</tr>
-</div>
-
 <footer>
   <p>Contact : <a href="mailto:teamrockers@example.com">teamrockers@example.com</a></p>
 </footer>
-
 </body>
 
 
