@@ -1,8 +1,8 @@
 import { Component, OnInit, Input} from '@angular/core';
-import { ITvShowsDisplay, IarrayTvShowsDisplay } from '../itv-shows-display';
+import { IarrayTvShowsDisplay } from '../itv-shows-display';
 import { TvShowService } from '../tv-show.service';
 import { ITvShowService } from '../itv-show-service';
-import { CommonModule } from '@angular/common'; 
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-tv-shows-display',

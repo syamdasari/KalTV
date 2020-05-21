@@ -24,10 +24,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-//import { ShowsCastComponent } from './shows-cast/shows-cast.component';
-// import { ShowsCastComponent } from './shows-cast/shows-cast.component';
-//import { ShowCastService } from './show-cast.service';
-// import { ShowCastService } from './show-cast.service';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DetailsDisplayComponent } from './details-display/details-display.component';
 import { MatDividerModule } from '@angular/material/divider';
@@ -79,13 +75,10 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     SearchByNameComponent,
     RegisterPageComponent,
     ForgotPasswordComponent,
-    //ShowsCastComponent,
-    // ShowsCastComponent,
-
     DetailsDisplayComponent,
     BillingComponentComponent,
     AuthorsComponent,
-    HomepageComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
@@ -148,7 +141,7 @@ exports:[
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-    ScrollingModule,
+    ScrollingModule
 ],
 
 

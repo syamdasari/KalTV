@@ -8,9 +8,6 @@ import { TvShowsDisplayComponent } from './tv-shows-display/tv-shows-display.com
 import { DetailsDisplayComponent } from './details-display/details-display.component';
 
 
-//import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-
-
 
   @Component({
     selector: 'app-root',
