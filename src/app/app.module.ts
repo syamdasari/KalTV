@@ -24,8 +24,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-// import { ShowsCastComponent } from './shows-cast/shows-cast.component';
-// import { ShowCastService } from './show-cast.service';
+import { ShowsCastComponent } from './shows-cast/shows-cast.component';
+import { ShowCastService } from './show-cast.service';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DetailsDisplayComponent } from './details-display/details-display.component';
 import { MatDividerModule } from '@angular/material/divider';
@@ -34,6 +34,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { BillingComponentComponent } from './billing-component/billing-component.component';
 import { AuthorsComponent} from './authors/authors.component';
 import {HomepageComponent} from './homepage/homepage.component'
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
 @NgModule({
@@ -49,7 +50,7 @@ import {HomepageComponent} from './homepage/homepage.component'
     SearchByNameComponent,
     RegisterPageComponent,
     ForgotPasswordComponent,
-    // ShowsCastComponent,
+    ShowsCastComponent,
     DetailsDisplayComponent,
     BillingComponentComponent,
     AuthorsComponent,
@@ -75,6 +76,7 @@ import {HomepageComponent} from './homepage/homepage.component'
     MatDividerModule,
     MatSliderModule,
     MatSidenavModule,
+    MatDatepickerModule
 
 ],
 exports:[
@@ -82,7 +84,7 @@ exports:[
 ],
 
 
-  providers: [TvShowService, ScheduleService, ShowSampleImagesService// , ShowCastService
+  providers: [TvShowService, ScheduleService, ShowSampleImagesService, ShowCastService
   ],
   bootstrap: [AppComponent]
 })
