@@ -7,13 +7,15 @@ import {map} from 'rxjs/operators';
 interface IScheduleData {
   name: string,
   airtime: string,
-  network: {
-    name: string
-  },
   summary: string,
   image: {
     medium: string
   },
+ show: {
+  network: {
+    name: string
+  },
+}
 }
 
 @Injectable({
@@ -36,7 +38,7 @@ export class ScheduleService {
     return {
       showName: data.name,
       airtime: data.airtime,
-      networkName: data?.network?.name,
+      networkName: data?.show?.network?.name,
       summary: data.summary,
       image: data?.image?.medium
     }
