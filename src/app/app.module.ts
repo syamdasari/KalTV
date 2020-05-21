@@ -32,7 +32,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { BillingComponentComponent } from './billing-component/billing-component.component';
-
+import { AuthorsComponent} from './authors/authors.component';
+import {HomepageComponent} from './homepage/homepage.component'
 
 
 @NgModule({
@@ -50,8 +51,9 @@ import { BillingComponentComponent } from './billing-component/billing-component
     ForgotPasswordComponent,
     // ShowsCastComponent,
     DetailsDisplayComponent,
-    BillingComponentComponent
-
+    BillingComponentComponent,
+    AuthorsComponent,
+    HomepageComponent,
   ],
   imports: [
     BrowserModule,
@@ -72,7 +74,8 @@ import { BillingComponentComponent } from './billing-component/billing-component
     MatTabsModule,
     MatDividerModule,
     MatSliderModule,
-    MatSidenavModule
+    MatSidenavModule,
+
 ],
 exports:[
   MatDialogModule
