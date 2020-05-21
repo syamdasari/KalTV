@@ -22,7 +22,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-//import { MatFlexLayout } from ''
+import { ShowsCastComponent } from './shows-cast/shows-cast.component';
+import { ShowCastService } from './show-cast.service';
+
 
 
 @NgModule({
@@ -37,7 +39,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     SampleShowsComponent,
     SearchByNameComponent,
     RegisterPageComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    ShowsCastComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     MatFormFieldModule
   ],
 
-  providers: [TvShowService, ScheduleService, ShowSampleImagesService],
+  providers: [TvShowService, ScheduleService, ShowSampleImagesService, ShowCastService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

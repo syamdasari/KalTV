@@ -26,7 +26,7 @@ export class AppComponent {
             this.tvshowsdisplay = data;
           }
           else{
-            this.errorMessage = "SORRY!! There is no such Show exist with the name you have entered";
+            this.errorMessage = "SORRY!! There is no such Show exists with the name you have entered";
           }
         });
     }
