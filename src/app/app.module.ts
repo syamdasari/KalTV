@@ -31,7 +31,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BillingComponentComponent } from './billing-component/billing-component.component';
 import { AuthorsComponent} from './authors/authors.component';
-import {HomepageComponent} from './homepage/homepage.component';
+import {HomepageComponent} from './homepage/homepage.component'
 import { CommonModule } from '@angular/common';
 
 
@@ -100,12 +100,12 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     MatDividerModule,
     MatSliderModule,
     MatSidenavModule,
+    MatDatepickerModule,
     CommonModule
 
 ],
 exports:[
   MatDialogModule,
-
   MatAutocompleteModule,
     MatBadgeModule,
     MatBottomSheetModule,
@@ -145,7 +145,7 @@ exports:[
 ],
 
 
-  providers: [TvShowService, ScheduleService, ShowSampleImagesService// , ShowCastService
+  providers: [TvShowService, ScheduleService, ShowSampleImagesService, // ShowCastService
   ],
   bootstrap: [AppComponent]
 })
