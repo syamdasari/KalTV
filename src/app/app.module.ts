@@ -48,7 +48,7 @@ import { BillingComponentComponent } from './billing-component/billing-component
     SearchByNameComponent,
     RegisterPageComponent,
     ForgotPasswordComponent,
-    ShowsCastComponent
+    ShowsCastComponent,
     DetailsDisplayComponent,
     BillingComponentComponent
 
