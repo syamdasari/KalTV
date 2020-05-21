@@ -24,8 +24,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { ShowsCastComponent } from './shows-cast/shows-cast.component';
-import { ShowCastService } from './show-cast.service';
+// import { ShowsCastComponent } from './shows-cast/shows-cast.component';
+// import { ShowCastService } from './show-cast.service';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DetailsDisplayComponent } from './details-display/details-display.component';
 import { MatDividerModule } from '@angular/material/divider';
@@ -50,7 +50,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     SearchByNameComponent,
     RegisterPageComponent,
     ForgotPasswordComponent,
-    ShowsCastComponent,
+    // ShowsCastComponent,
     DetailsDisplayComponent,
     BillingComponentComponent,
     AuthorsComponent,
@@ -84,7 +84,7 @@ exports:[
 ],
 
 
-  providers: [TvShowService, ScheduleService, ShowSampleImagesService, ShowCastService
+  providers: [TvShowService, ScheduleService, ShowSampleImagesService, // ShowCastService
   ],
   bootstrap: [AppComponent]
 })
