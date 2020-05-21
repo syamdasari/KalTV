@@ -9,12 +9,15 @@ import { ITvShowService } from '../itv-show-service';
   styleUrls: ['./tv-shows-display.component.css']
 })
 export class TvShowsDisplayComponent implements OnInit {
-@Input() currentdata: IarrayTvShowsDisplay;
-@Input() itemNotFound: string;
+  @Input() currentdata: IarrayTvShowsDisplay;
+ @Input() itemNotFound: string;
+ displayedColumns: string[] = ['name', 'language', 'scheduleDays', 'scheduleTime','image', 'url'];
+
   constructor(private tvshowservice: TvShowService) { }
 
   ngOnInit(): void {
-   // this.tvshowservice.getShowDetails('marvel').subscribe(data => this.currentdata = data);
+
   }
 
 }
+

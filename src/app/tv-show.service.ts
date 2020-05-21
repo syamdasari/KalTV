@@ -46,11 +46,12 @@ export class TvShowService implements ITvShowService {
            url: `${environment.baseUrl}tvmaze.com/shows/${data[i].show.id}/${data[i].show.name}`,
            name: data[i].show.name,
            language: data[i].show.language,
-           scheduleTime: data[i].show.schedule.time,
+
+           scheduleTime: data[i].show.schedule.time ? data[i].show.schedule.time : 'Not listed',
            scheduleDays: data[i].show.schedule != null && data[i].show.schedule.days.length != 0 ? data[i].show.schedule.days : ["Not Found"],
            rating: data[i].show.rating != null && data[i].show.rating.average != null? data[i].show.rating.average : "Not Rated",
            image: data[i].show.image != null ? data[i].show.image.medium : "https://dubsism.files.wordpress.com/2017/12/image-not-found.png",
-           networkname: data[i].show.network != null ? data[i].show.network.name : "Not Found",
+          // networkname: data[i].show.network != null ? data[i].show.network.name : "Not Found",
            summary: data[i].show.summary != null ? data[i].show.summary.replace(/<[^>]*>?/gm, '') : "No Summary",
            //summary: data[i].show.summary.replace(/<\/p>/gm, "").replace(/<p>/gm,"").replace(/<b>/gm,"").replace(/<\/b>/gm,""),
          } as ITvShowsDisplay);
@@ -58,4 +59,5 @@ export class TvShowService implements ITvShowService {
          //console.log("summary"+data[i].show.summary);
          }
          return tvShowDisplayArray;
-        }}}
+        }}
+      }

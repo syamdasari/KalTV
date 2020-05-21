@@ -19,11 +19,19 @@ import { MatCardModule } from '@angular/material/card';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTabsModule } from '@angular/material/tabs';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ShowsCastComponent } from './shows-cast/shows-cast.component';
 import { ShowCastService } from './show-cast.service';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DetailsDisplayComponent } from './details-display/details-display.component';
+import { MatDividerModule } from '@angular/material/divider';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { BillingComponentComponent } from './billing-component/billing-component.component';
 
 
 
@@ -41,6 +49,9 @@ import { ShowCastService } from './show-cast.service';
     RegisterPageComponent,
     ForgotPasswordComponent,
     ShowsCastComponent
+    DetailsDisplayComponent,
+    BillingComponentComponent
+
   ],
   imports: [
     BrowserModule,
@@ -55,8 +66,18 @@ import { ShowCastService } from './show-cast.service';
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatFormFieldModule
-  ],
+    MatFormFieldModule,
+    MatTableModule,
+    MatDialogModule,
+    MatTabsModule,
+    MatDividerModule,
+    MatSliderModule,
+    MatSidenavModule
+],
+exports:[
+  MatDialogModule
+],
+
 
   providers: [TvShowService, ScheduleService, ShowSampleImagesService, ShowCastService],
   bootstrap: [AppComponent]

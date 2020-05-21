@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SearchByNameComponent } from './search-by-name.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('SearchByNameComponent', () => {
   let component: SearchByNameComponent;
@@ -8,7 +9,8 @@ describe('SearchByNameComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SearchByNameComponent ]
+      declarations: [ SearchByNameComponent ],
+      imports:[HttpClientModule]
     })
     .compileComponents();
   }));
