@@ -27,37 +27,32 @@ export class TvShowService implements ITvShowService {
 
   }
 
+//Transform to ITvShowsDisplay function below
+private transformToIarrayTvShowsDisplay(data: IarrayTvShowsDisplayData): IarrayTvShowsDisplay{
 
-  //Transform to ITvShowsDisplay function below
-  private transformToIarrayTvShowsDisplay(data: IarrayTvShowsDisplayData): IarrayTvShowsDisplay{
-
-    var len = data.length;
-    console.log( 'Number of shows with the given text in the name :' + len);
-
+  var len = data.length;
+  console.log( 'Number of shows with the given text in the name :' + len);
 
 
-    let  tvShowDisplayArray: IarrayTvShowsDisplay = new Array();
 
-    if(len){
-    for (var i = 0  ; i < len ; i++)
-       {
-         tvShowDisplayArray.push({
-           id: data[i].show.id,
-           url: `${environment.baseUrl}tvmaze.com/shows/${data[i].show.id}/${data[i].show.name}`,
-           name: data[i].show.name,
-           language: data[i].show.language,
+  let  tvShowDisplayArray: IarrayTvShowsDisplay = new Array();
 
-           scheduleTime: data[i].show.schedule.time ? data[i].show.schedule.time : 'Not listed',
-           scheduleDays: data[i].show.schedule != null && data[i].show.schedule.days.length != 0 ? data[i].show.schedule.days : ["Not Found"],
-           rating: data[i].show.rating != null && data[i].show.rating.average != null? data[i].show.rating.average : "Not Rated",
-           image: data[i].show.image != null ? data[i].show.image.medium : "https://dubsism.files.wordpress.com/2017/12/image-not-found.png",
-          // networkname: data[i].show.network != null ? data[i].show.network.name : "Not Found",
-           summary: data[i].show.summary != null ? data[i].show.summary.replace(/<[^>]*>?/gm, '') : "No Summary",
-           //summary: data[i].show.summary.replace(/<\/p>/gm, "").replace(/<p>/gm,"").replace(/<b>/gm,"").replace(/<\/b>/gm,""),
-         } as ITvShowsDisplay);
-         //console.log(data[i].show.rating + ':');
-         //console.log("summary"+data[i].show.summary);
-         }
-         return tvShowDisplayArray;
-        }}
-      }
+  if(len){
+  for (var i = 0  ; i < len ; i++)
+     {
+       tvShowDisplayArray.push({
+         id: data[i].show.id,
+         url: `${environment.baseUrl}tvmaze.com/shows/${data[i].show.id}/${data[i].show.name}`,
+         name: data[i].show.name,
+         language: data[i].show.language,
+
+         scheduleTime: data[i].show.schedule.time ? data[i].show.schedule.time : 'Not listed',
+         scheduleDays: data[i].show.schedule != null && data[i].show.schedule.days.length != 0 ? data[i].show.schedule.days : ["Not Found"],
+         rating: data[i].show.rating != null && data[i].show.rating.average != null? data[i].show.rating.average : "Not Rated",
+         image: data[i].show.image != null ? data[i].show.image.medium : "https://dubsism.files.wordpress.com/2017/12/image-not-found.png",
+         summary: data[i].show.summary != null ? data[i].show.summary.replace(/<[^>]*>?/gm, '') : "No Summary",
+       } as ITvShowsDisplay);
+       }
+       return tvShowDisplayArray;
+      }}
+    }

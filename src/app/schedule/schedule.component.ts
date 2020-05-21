@@ -13,10 +13,12 @@ export class ScheduleComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.scheduleService.getScheduleDetails('US', '2020-05-05')
-    .subscribe((data) =>
-      this.localData = data
-      )
+    const today = new Date();
+    const dd = String(today.getDate()).padStart(2, '0');
+    const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    const yyyy = today.getFullYear();
+    this.scheduleService.getScheduleDetails('US', yyyy + '-' + mm + '-' + dd)
+    .subscribe(data => this.localData = data)
 
   }
 

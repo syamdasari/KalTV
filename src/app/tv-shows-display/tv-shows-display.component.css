@@ -1,54 +1,5 @@
-/*.movie-list, th {
-  border: 1px solid rgb(211, 211, 228);
-
-}
-
-th {
-  background-color: rgb(196, 235, 21);
-  font-size: larger;
-  color: rgb(17, 8, 8);
-}
-
-td {
-  border-bottom: 3px solid rgb(110, 190, 19);
-  min-width: 75px;
-}
-
-tr {
-  height: 100px;
-}
-
-table {
-  background-color: powderblue;
-  border-collapse: collaps;
-  max-width: 100%;
-}
-
-tr:hover {
-  background-color: rgb(220, 225, 226);
-}
-
-table {
-  color: rgb(5, 9, 238);
-}
-
-.show-image {
-  max-height: 100px;
-}
-
-#show-summary {
-  max-height: 200px;
-  overflow: hidden;
-}
-.scrollit {
-  overflow:scroll;
-  height:100px;
-}
-
-
-*/
 mat-table{
-  
+
   overflow:auto;
 }
 mat-cell{

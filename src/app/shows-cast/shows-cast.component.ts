@@ -18,7 +18,7 @@ export class ShowsCastComponent implements OnInit
 
   ngOnInit(): void
   {
-    // this.showCastService.getShowCast().subscribe(data => this.current(data))
+    this.showCast.getShowCast('hero').subscribe((data: IShowCast) => this.current = data );
   }
 
 }

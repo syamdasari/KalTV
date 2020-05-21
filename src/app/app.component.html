@@ -1,27 +1,19 @@
-<style>
-  body {
-
-    height:100%,
-    }
-  h1 {background-color: red;}
-  p {color: blue;}
-  </style>
-<body style="text-align:center">
-
-
+<body>
+<div style="text-align: center;">
   <mat-tab-group>
-    <mat-tab label="Search">
-      <h1>Search </h1>
+    <mat-tab label="Name Search">
+      <h1>TV Shows</h1>
       <div style="font-size:15px; line-height:30px;">
-        <div> Enter your desired Show Name</div>
-         <div>
-          <!-- <app-search-by-name (searchEvent)="doSearch($event)"></app-search-by-name> -->
-         </div>
+        <button mat-button (click)="openDialog()">CLICK HERE!!! to Search by Show Name</button>
       </div>
     </mat-tab>
-    <mat-tab label="Shows">
-      <h1>Shows</h1>
-      <p>Shows List </p>
+    <mat-tab label="Home">
+      <h1>Home </h1>
+      <div style="font-size:15px; line-height:30px;">
+        <div>
+          <app-homepage></app-homepage>
+         </div>
+      </div>
     </mat-tab>
     <mat-tab label="Schedules">
       <h1>Schedules </h1>
@@ -41,21 +33,16 @@
     </mat-tab>
     <mat-tab label="Author Info">
       <h1>Authors </h1>
-      <h1> Author info here </h1>
+      <app-authors></app-authors>
     </mat-tab>
   </mat-tab-group>
   <mat-divider></mat-divider>
   <h1>Unlimited movies, TV shows,  <br/> and more. <br/> Watch anywhere. Cancel anytime.</h1>
-  <!-- <mat-divider></mat-divider> -->
-     <mat-card color="secondary">
-       <app-tv-shows-display [currentdata]= "tvshowsdisplay" [itemNotFound] = "errorMessage">  </app-tv-shows-display>
-     </mat-card>
-     <mat-card color="secondary">
-       <app-tv-shows-display [currentdata]= "tvshowsdisplay">  </app-tv-shows-display>
-     </mat-card>
+
 <footer>
   <p>Contact : <a href="mailto:teamrockers@example.com">teamrockers@example.com</a></p>
 </footer>
+</div>
 </body>
 
 
