@@ -6,3 +6,11 @@
 /*.gotDetailsByNameTable{
 display: block; border: 1px solid green; height: 300px; overflow-y: scroll;
 }*/
+
+.example-container {
+  width: 400px;
+  height: 200px;
+  margin: 10px;
+  border: 1px solid #555;
+}
+

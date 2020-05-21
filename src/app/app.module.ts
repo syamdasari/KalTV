@@ -24,8 +24,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { DetailsDisplayComponent } from './details-display/details-display.component';
+import { MatDividerModule } from '@angular/material/divider';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { BillingComponentComponent } from './billing-component/billing-component.component';
+
 
 
 @NgModule({
@@ -41,7 +46,8 @@ import { DetailsDisplayComponent } from './details-display/details-display.compo
     SearchByNameComponent,
     RegisterPageComponent,
     ForgotPasswordComponent,
-    DetailsDisplayComponent
+    DetailsDisplayComponent,
+    BillingComponentComponent
 
   ],
   imports: [
@@ -59,8 +65,11 @@ import { DetailsDisplayComponent } from './details-display/details-display.compo
     MatButtonModule,
     MatFormFieldModule,
     MatTableModule,
-    MatDialogModule
-
+    MatDialogModule,
+    MatTabsModule,
+    MatDividerModule,
+    MatSliderModule,
+    MatSidenavModule
 ],
 exports:[
   MatDialogModule
