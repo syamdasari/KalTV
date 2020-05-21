@@ -24,17 +24,48 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+//import { ShowsCastComponent } from './shows-cast/shows-cast.component';
 // import { ShowsCastComponent } from './shows-cast/shows-cast.component';
+//import { ShowCastService } from './show-cast.service';
 // import { ShowCastService } from './show-cast.service';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DetailsDisplayComponent } from './details-display/details-display.component';
 import { MatDividerModule } from '@angular/material/divider';
-import {MatSliderModule} from '@angular/material/slider';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { BillingComponentComponent } from './billing-component/billing-component.component';
 import { AuthorsComponent} from './authors/authors.component';
 import {HomepageComponent} from './homepage/homepage.component'
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {HomepageComponent} from './homepage/homepage.component';
+import { CommonModule } from '@angular/common';
+
+
+
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatListModule} from '@angular/material/list';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatSortModule} from '@angular/material/sort';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatTreeModule} from '@angular/material/tree';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 
 @NgModule({
@@ -50,7 +81,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     SearchByNameComponent,
     RegisterPageComponent,
     ForgotPasswordComponent,
+    //ShowsCastComponent,
     // ShowsCastComponent,
+
     DetailsDisplayComponent,
     BillingComponentComponent,
     AuthorsComponent,
@@ -76,11 +109,48 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatDividerModule,
     MatSliderModule,
     MatSidenavModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    CommonModule
 
 ],
 exports:[
-  MatDialogModule
+  MatDialogModule,
+  MatAutocompleteModule,
+    MatBadgeModule,
+    MatBottomSheetModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatStepperModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    MatTreeModule,
+    ScrollingModule,
 ],
 
 
