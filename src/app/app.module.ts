@@ -21,23 +21,21 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
-
 import { MatTabsModule } from '@angular/material/tabs';
-
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-
 import { ShowsCastComponent } from './shows-cast/shows-cast.component';
 import { ShowCastService } from './show-cast.service';
-
+// import { ShowsCastComponent } from './shows-cast/shows-cast.component';
+// import { ShowCastService } from './show-cast.service';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DetailsDisplayComponent } from './details-display/details-display.component';
-
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BillingComponentComponent } from './billing-component/billing-component.component';
-
+import { AuthorsComponent} from './authors/authors.component';
+import {HomepageComponent} from './homepage/homepage.component'
 
 
 @NgModule({
@@ -54,9 +52,12 @@ import { BillingComponentComponent } from './billing-component/billing-component
     RegisterPageComponent,
     ForgotPasswordComponent,
     ShowsCastComponent,
-    DetailsDisplayComponent,
-    BillingComponentComponent
+    // ShowsCastComponent,
 
+    DetailsDisplayComponent,
+    BillingComponentComponent,
+    AuthorsComponent,
+    HomepageComponent,
   ],
   imports: [
     BrowserModule,
@@ -77,14 +78,16 @@ import { BillingComponentComponent } from './billing-component/billing-component
     MatTabsModule,
     MatDividerModule,
     MatSliderModule,
-    MatSidenavModule
+    MatSidenavModule,
+
 ],
 exports:[
   MatDialogModule
 ],
 
 
-  providers: [TvShowService, ScheduleService, ShowSampleImagesService, ShowCastService],
+  providers: [TvShowService, ScheduleService, ShowSampleImagesService// , ShowCastService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

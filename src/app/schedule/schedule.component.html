@@ -1,5 +1,5 @@
 <table border="1">
-  <><H1>TV Schedule</H1>
+  <H1>TV Schedule</H1>
   <tr>
     <td>Show Name</td>
     <td>Airtime</td>
@@ -11,7 +11,7 @@
     <td>{{show.showName}}</td>
     <td>{{show.airtime}}</td>
     <td>{{show.networkName}}</td>
-    <td><img src="{{show.image}}" alt="{{show.showName}}"></td>
+    <td><img *ngIf="show.image" src="{{show.image}}" alt="{{show.showName}}"></td>
     <td [innerHTML]="show.summary"></td>
   </tr>
 </table>
