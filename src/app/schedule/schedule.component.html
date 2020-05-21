@@ -11,7 +11,7 @@
     <td>{{show.showName}}</td>
     <td>{{show.airtime}}</td>
     <td>{{show.networkName}}</td>
-    <td><img src="{{show.image}}" alt="{{show.showName}}"></td>
+    <td><img *ngIf="show.image" src="{{show.image}}" alt="{{show.showName}}"></td>
     <td [innerHTML]="show.summary"></td>
   </tr>
 </table>
