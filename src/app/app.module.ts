@@ -42,7 +42,6 @@ import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatChipsModule} from '@angular/material/chips';
-import {MatStepperModule} from '@angular/material/stepper';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -60,6 +59,10 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import {MatStepperModule} from '@angular/material/stepper';
+import { TesttableComponent } from './testtable/testtable.component';
+import { TestcardComponent } from './testcard/testcard.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 
 @NgModule({
@@ -78,7 +81,9 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     DetailsDisplayComponent,
     BillingComponentComponent,
     AuthorsComponent,
-    HomepageComponent
+    HomepageComponent,
+    TesttableComponent,
+    TestcardComponent
   ],
   imports: [
     BrowserModule,
@@ -101,7 +106,16 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     MatSliderModule,
     MatSidenavModule,
     MatDatepickerModule,
-    CommonModule
+    CommonModule,
+    MatStepperModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatGridListModule,
+    MatMenuModule,
+    LayoutModule,
+    MatSelectModule,
+    MatRadioModule,
+
 
 ],
 exports:[
@@ -141,7 +155,8 @@ exports:[
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-    ScrollingModule
+    ScrollingModule,
+    MatStepperModule,
 ],
 
 

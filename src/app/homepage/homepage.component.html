@@ -17,15 +17,20 @@ p {
 </style>
 </head>
 <body>
-<h1>
-  Welcome to MIGS Entertainment service
-<br><br/>
-  Unlimited movies, TV shows, and more.
-<br/><br/>
-  Watch anywhere. Cancel anytime.
-</h1>
-
-<footer>
-  Contact us @ <a href='mailto:teamrockers@kals.com'> Team rockers </a>
-</footer>
+  <table>
+    <tr>
+     <h1>
+        Welcome to MIGS Entertainment service
+      </h1>
+  </tr>
+  <tr>
+      <app-sample-shows></app-sample-shows>
+   </tr>
+   <tr>
+    <h1>TV Shows</h1>
+    <div style="font-size:15px; line-height:30px;">
+      <button mat-button (click)="openDialog()">CLICK HERE!!! to Search by Show Name</button>
+    </div>
+    </tr>
+</table>
 </body>
