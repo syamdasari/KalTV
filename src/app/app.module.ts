@@ -63,6 +63,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { TesttableComponent } from './testtable/testtable.component';
 import { TestcardComponent } from './testcard/testcard.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { ShowActorsComponent } from './show-actors/show-actors.component';
 
 
 @NgModule({
@@ -83,7 +84,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     AuthorsComponent,
     HomepageComponent,
     TesttableComponent,
-    TestcardComponent
+    TestcardComponent,
+    ShowActorsComponent
   ],
   imports: [
     BrowserModule,

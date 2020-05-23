@@ -9,13 +9,59 @@ import { ShowSampleImagesService } from '../show-sample-images.service';
   styleUrls: ['./sample-shows.component.css']
 })
 export class SampleShowsComponent implements OnInit {
-  sampleShowImage: IShowImages;
+  sampleShowImages: IShowImages[];
   constructor() {
-    this.sampleShowImage = {
+    this.sampleShowImages = [{
     showId: 1,
     showImage: 'http://static.tvmaze.com/uploads/images/medium_portrait/0/43.jpg',
     showDesc: 'Original Untouched'
-    };
+    },
+    {
+      showId: 1,
+      showImage: 'http://static.tvmaze.com/uploads/images/medium_portrait/0/43.jpg',
+      showDesc: 'Original Untouched'
+    },
+    {
+      showId: 1,
+      showImage: 'http://static.tvmaze.com/uploads/images/medium_portrait/0/43.jpg',
+      showDesc: 'Original Untouched'
+    },
+    {
+      showId: 1,
+      showImage: 'http://static.tvmaze.com/uploads/images/medium_portrait/0/43.jpg',
+      showDesc: 'Original Untouched'
+    },
+    {
+      showId: 1,
+      showImage: 'http://static.tvmaze.com/uploads/images/medium_portrait/0/43.jpg',
+      showDesc: 'Original Untouched'
+    },
+    {
+      showId: 1,
+      showImage: 'http://static.tvmaze.com/uploads/images/medium_portrait/0/43.jpg',
+      showDesc: 'Original Untouched'
+    },
+    {
+      showId: 1,
+      showImage: 'http://static.tvmaze.com/uploads/images/medium_portrait/0/43.jpg',
+      showDesc: 'Original Untouched'
+    },
+    {
+      showId: 1,
+      showImage: 'http://static.tvmaze.com/uploads/images/medium_portrait/0/43.jpg',
+      showDesc: 'Original Untouched'
+    },
+    {
+      showId: 1,
+      showImage: 'http://static.tvmaze.com/uploads/images/medium_portrait/0/43.jpg',
+      showDesc: 'Original Untouched'
+    },
+    {
+      showId: 1,
+      showImage: 'http://static.tvmaze.com/uploads/images/medium_portrait/0/43.jpg',
+      showDesc: 'Original Untouched'
+    }
+  ];
   }
   //  constructor( private showSampleImagesService: ShowSampleImagesService ){
   //  }
