@@ -60,10 +60,9 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import {MatStepperModule} from '@angular/material/stepper';
-import { TesttableComponent } from './testtable/testtable.component';
-import { TestcardComponent } from './testcard/testcard.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ShowActorsComponent } from './show-actors/show-actors.component';
+import { DisplayshowsComponent} from './displayshows/displayshows.component';
 
 
 @NgModule({
@@ -83,9 +82,7 @@ import { ShowActorsComponent } from './show-actors/show-actors.component';
     BillingComponentComponent,
     AuthorsComponent,
     HomepageComponent,
-    TesttableComponent,
-    TestcardComponent,
-    ShowActorsComponent
+    DisplayshowsComponent,
   ],
   imports: [
     BrowserModule,
@@ -159,6 +156,7 @@ exports:[
     MatTreeModule,
     ScrollingModule,
     MatStepperModule,
+    LayoutModule
 ],
 
 
