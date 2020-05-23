@@ -1,4 +1,4 @@
-<table border="1">
+<!-- <table border="1">
     <tr>
     <td>Show Name</td>
     <td>Airtime</td>
@@ -13,5 +13,42 @@
     <td><img *ngIf="show.image" src="{{show.image}}" alt="{{show.showName}}"></td>
     <td [innerHTML]="show.summary"></td>
   </tr>
+</table> -->
+
+<table mat-table [dataSource]="localData" class="mat-elevation-z8">
+
+    <!-- Show Name Column -->
+  <ng-container matColumnDef="showName">
+    <mat-header-cell *matHeaderCellDef> Show Name </mat-header-cell>
+    <mat-cell *matCellDef="let show">{{show.showName}}</mat-cell>
+  </ng-container>
+
+  <!-- Airtime Column -->
+  <ng-container matColumnDef="airtime">
+    <mat-header-cell *matHeaderCellDef> Airtime </mat-header-cell>
+    <mat-cell *matCellDef="let show"> {{show.airtime}} </mat-cell>
+  </ng-container>
+
+  <!-- Network Column -->
+  <ng-container matColumnDef="networkName">
+    <mat-header-cell *matHeaderCellDef> Network </mat-header-cell>
+    <mat-cell *matCellDef="let show"> {{show.networkName}} </mat-cell>
+  </ng-container>
+
+  <!-- Image Column -->
+  <ng-container matColumnDef="image">
+    <mat-header-cell *matHeaderCellDef> Image </mat-header-cell>
+    <mat-cell *matCellDef="let show"><img *ngIf="show.image" src="{{show.image}}" alt="{{show.showName}}"></mat-cell>
+  </ng-container>
+
+  <!-- Summary Column -->
+  <ng-container matColumnDef="summary">
+    <mat-header-cell *matHeaderCellDef> Summary </mat-header-cell>
+    <mat-cell *matCellDef="let show" [innerHTML]="show.summary"> </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 </table>
+
 
