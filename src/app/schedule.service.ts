@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { ISchedule } from './ischedule';
 import {map} from 'rxjs/operators';
+import { IScheduleService } from './ischedule-service';
 
 interface IScheduleData {
   name: string,
@@ -21,7 +22,7 @@ interface IScheduleData {
 @Injectable({
   providedIn: 'root'
 })
-export class ScheduleService {
+export class ScheduleService implements IScheduleService {
 
   constructor(private httpClient: HttpClient) { }
 

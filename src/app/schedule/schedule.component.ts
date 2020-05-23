@@ -9,7 +9,7 @@ import { ScheduleService } from '../schedule.service';
 })
 export class ScheduleComponent implements OnInit {
   localData: ISchedule[]
-     constructor(private scheduleService: ScheduleService) {    }
+     constructor(private scheduleService: ScheduleService) { }
 
 
   ngOnInit(): void {
