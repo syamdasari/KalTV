@@ -27,11 +27,13 @@ export class ShowSampleImagesService {
   constructor(private httpClient: HttpClient) {
 
   }
+
   getShowImage(){
    return this.httpClient.get<IShowSampleImagesData>(
       `${environment.baseUrl}api.tvmaze.com/shows/1/images&appid=${environment.appId}`
    ).pipe(map(data => this.tranformToIShowImage(data)));
   }
+
   tranformToIShowImage(data: IShowSampleImagesData): IShowImages
   {
       return {

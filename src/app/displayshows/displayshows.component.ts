@@ -1,30 +1,17 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatTable } from '@angular/material/table';
-import { DisplayshowsDataSource, DisplayshowsItem } from './displayshows-datasource';
-
+import { Component, OnInit } from '@angular/core';
+import { IShow } from '../ishow';
+import { ShowServiceService } from '../show-service.service';
 @Component({
   selector: 'app-displayshows',
   templateUrl: './displayshows.component.html',
   styleUrls: ['./displayshows.component.css']
 })
-export class DisplayshowsComponent implements AfterViewInit, OnInit {
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatTable) table: MatTable<DisplayshowsItem>;
-  dataSource: DisplayshowsDataSource;
-
-  /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name'];
-
-  ngOnInit() {
-    this.dataSource = new DisplayshowsDataSource();
+export class DisplayshowsComponent implements OnInit {
+  showDetails: IShow[]
+  
+  constructor(private showService: ShowServiceService){
   }
-
-  ngAfterViewInit() {
-    this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.paginator;
-    this.table.dataSource = this.dataSource;
+  ngOnInit() : void {
+    this.showService.getShows().subscribe(data => this.showDetails = data);
   }
 }

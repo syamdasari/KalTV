@@ -33,6 +33,8 @@ import { BillingComponentComponent } from './billing-component/billing-component
 import { AuthorsComponent} from './authors/authors.component';
 import {HomepageComponent} from './homepage/homepage.component'
 import { CommonModule } from '@angular/common';
+import { DisplayshowsComponent } from './displayshows/displayshows.component';
+import {ShowServiceService} from './show-service.service';
 
 
 
@@ -62,7 +64,6 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import {MatStepperModule} from '@angular/material/stepper';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ShowActorsComponent } from './show-actors/show-actors.component';
-import { DisplayshowsComponent} from './displayshows/displayshows.component';
 
 
 @NgModule({
@@ -83,7 +84,7 @@ import { DisplayshowsComponent} from './displayshows/displayshows.component';
     AuthorsComponent,
     HomepageComponent,
     DisplayshowsComponent,
-  ],
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -114,8 +115,6 @@ import { DisplayshowsComponent} from './displayshows/displayshows.component';
     LayoutModule,
     MatSelectModule,
     MatRadioModule,
-
-
 ],
 exports:[
   MatDialogModule,
@@ -156,11 +155,11 @@ exports:[
     MatTreeModule,
     ScrollingModule,
     MatStepperModule,
-    LayoutModule
+    LayoutModule,
 ],
 
 
-  providers: [TvShowService, ScheduleService, ShowSampleImagesService, // ShowCastService
+  providers: [TvShowService, ScheduleService, ShowSampleImagesService, ShowServiceService
   ],
   bootstrap: [AppComponent]
 })
