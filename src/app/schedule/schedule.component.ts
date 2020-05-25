@@ -2,12 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { ISchedule } from '../ischedule';
 import { ScheduleService } from '../schedule.service';
 
+
 @Component({
   selector: 'app-schedule',
   templateUrl: './schedule.component.html',
   styleUrls: ['./schedule.component.css']
 })
 export class ScheduleComponent implements OnInit {
+
+  displayedColumns: string[] = ['showName', 'airtime', 'networkName', 'image', 'summary'];
+
   localData: ISchedule[]
      constructor(private scheduleService: ScheduleService) { }
 
@@ -23,3 +27,7 @@ export class ScheduleComponent implements OnInit {
   }
 
 }
+
+
+
+
