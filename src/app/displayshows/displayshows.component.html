@@ -1,21 +1,57 @@
-<table border='10px'>
-  <tr>
-  <th>  Id  </th>
-  <th>  Name  </th>
-  <th>  URL  </th>
-  <th> Image </th>
-  <th>  Language  </th>
-  <th>  Duration  </th>
-  <th>  TVDB  </th>
-  </tr>
+<table mat-table [dataSource]="showDetails" class="mat-elevation-z8">
+  <!-- Show Name Column -->
+<ng-container matColumnDef="id">
+  <mat-header-cell *matHeaderCellDef> Id </mat-header-cell>
+  <mat-cell *matCellDef="let show">{{show.id}}</mat-cell>
+</ng-container>
 
-  <tr *ngFor="let show of showDetails">
-    <td> {{show.id}}</td>
-    <td> {{show.name}} </td>
-    <td> {{show.showUrl}}</td>
-    <td> <img src={{show.image}}/></td>
-    <td> {{show.language}}</td>
-    <td> {{show.duration}}</td>
-    <td> {{show.theTvDbId}}</td>
-  </tr>
-</table>>
+<!-- Airtime Column -->
+<ng-container matColumnDef="name">
+  <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+  <mat-cell *matCellDef="let show"> {{show.name}} </mat-cell>
+</ng-container>
+
+<!-- Network Column -->
+<ng-container matColumnDef="duration">
+  <mat-header-cell *matHeaderCellDef> Duration </mat-header-cell>
+  <mat-cell *matCellDef="let show"> {{show.duration}} </mat-cell>
+</ng-container>
+
+<!-- Image Column -->
+<ng-container matColumnDef="image">
+  <mat-header-cell *matHeaderCellDef> Image </mat-header-cell>
+  <mat-cell *matCellDef="let show"><img *ngIf="show.image" src="{{show.image}}" alt="{{show.name}}" width='150' height='150'></mat-cell>
+</ng-container>
+
+<!-- URL Column -->
+<ng-container matColumnDef="showUrl">
+  <mat-header-cell *matHeaderCellDef> Show Link </mat-header-cell>
+  <mat-cell *matCellDef="let show" [innerHTML]="show.showUrl">
+    <a href='{{show.showUrl}}'>{{show.name}</a>
+  </mat-cell>
+</ng-container>
+
+<!-- URL Column -->
+<ng-container matColumnDef="language">
+  <mat-header-cell *matHeaderCellDef> language </mat-header-cell>
+  <mat-cell *matCellDef="let show"> {{show.language}} </mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="links">
+  <mat-header-cell *matHeaderCellDef> Links </mat-header-cell>
+  <mat-cell *matCellDef="let show"> {{show.links}} </mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="tvrageId">
+  <mat-header-cell *matHeaderCellDef> TVRageId </mat-header-cell>
+  <mat-cell *matCellDef="let show"> {{show.tvrageId}} </mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="theTvDbId">
+  <mat-header-cell *matHeaderCellDef> theTvDbId </mat-header-cell>
+  <mat-cell *matCellDef="let show"> {{show.theTvDbId}} </mat-cell>
+</ng-container>
+<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+<mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</table>
+<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>

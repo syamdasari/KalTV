@@ -8,7 +8,9 @@ import { ShowServiceService } from '../show-service.service';
 })
 export class DisplayshowsComponent implements OnInit {
   showDetails: IShow[]
-  
+
+  displayedColumns: string[] = ['id', 'name', 'image', 'duration','showUrl', 'language', 'tvrageId', 'theTvDbId', 'links'];
+
   constructor(private showService: ShowServiceService){
   }
   ngOnInit() : void {
