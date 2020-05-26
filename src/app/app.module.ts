@@ -64,6 +64,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import {MatStepperModule} from '@angular/material/stepper';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ShowActorsComponent } from './show-actors/show-actors.component';
+import { SubscribeComponent } from './subscribe/subscribe.component';
 
 
 @NgModule({
@@ -84,6 +85,7 @@ import { ShowActorsComponent } from './show-actors/show-actors.component';
     AuthorsComponent,
     HomepageComponent,
     DisplayshowsComponent,
+    SubscribeComponent,
     ],
   imports: [
     BrowserModule,
