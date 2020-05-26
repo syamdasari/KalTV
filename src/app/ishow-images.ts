@@ -1,5 +1,7 @@
-export interface IShowImages {
-  showId: Number,
-  showImage: string,
-  showDesc: string
+export interface IShowImage {
+  showId: number;
+  showName: string;
+  showImage: string;
+  showDesc: string;
+  showUrl: string;
 }

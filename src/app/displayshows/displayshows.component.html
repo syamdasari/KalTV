@@ -1,3 +1,10 @@
+<form>
+    <mat-form-field>
+      <mat-icon matPrefix>search</mat-icon>
+      <input matInput placeholder="Enter Name" aria-label="Name" [formControl]="search" >
+    </mat-form-field>
+</form>
+<div>
 <table mat-table [dataSource]="showDetails" class="mat-elevation-z8">
   <!-- Show Name Column -->
 <ng-container matColumnDef="id">
@@ -26,27 +33,30 @@
 <!-- URL Column -->
 <ng-container matColumnDef="showUrl">
   <mat-header-cell *matHeaderCellDef> Show Link </mat-header-cell>
-  <mat-cell *matCellDef="let show" [innerHTML]="show.showUrl">
-    <a href='{{show.showUrl}}'>{{show.name}</a>
+  <mat-cell *matCellDef="let show">
+    <a href='{{show.showUrl}}'>{{show.name}}</a>
   </mat-cell>
 </ng-container>
 
-<!-- URL Column -->
+<!-- Language Column -->
 <ng-container matColumnDef="language">
-  <mat-header-cell *matHeaderCellDef> language </mat-header-cell>
+  <mat-header-cell *matHeaderCellDef> Language </mat-header-cell>
   <mat-cell *matCellDef="let show"> {{show.language}} </mat-cell>
 </ng-container>
 
+<!-- Links  Column -->
 <ng-container matColumnDef="links">
   <mat-header-cell *matHeaderCellDef> Links </mat-header-cell>
   <mat-cell *matCellDef="let show"> {{show.links}} </mat-cell>
 </ng-container>
 
+<!-- TVRageId Column-->
 <ng-container matColumnDef="tvrageId">
   <mat-header-cell *matHeaderCellDef> TVRageId </mat-header-cell>
   <mat-cell *matCellDef="let show"> {{show.tvrageId}} </mat-cell>
 </ng-container>
 
+<!--theTvDbId column -->
 <ng-container matColumnDef="theTvDbId">
   <mat-header-cell *matHeaderCellDef> theTvDbId </mat-header-cell>
   <mat-cell *matCellDef="let show"> {{show.theTvDbId}} </mat-cell>
@@ -55,3 +65,4 @@
 <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 </table>
 <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>
