@@ -65,11 +65,8 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ShowActorsComponent } from './show-actors/show-actors.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
-//import { PaginateshowsComponent } from './paginateshows/paginateshows.component';
 //import { JwPaginationComponent } from 'jw-angular-pagination';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { PaginateComponent } from './paginate/paginate.component';
-
 
 @NgModule({
   declarations: [
@@ -89,9 +86,7 @@ import { PaginateComponent } from './paginate/paginate.component';
     AuthorsComponent,
     HomepageComponent,
     DisplayshowsComponent,
-    SubscribeComponent,
-    PaginateComponent,
-    //PaginateshowsComponent
+    SubscribeComponent
     //JwPaginationComponent
     ],
   imports: [
