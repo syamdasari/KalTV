@@ -1,5 +1,5 @@
 body {
-
+  background-image: url('https://material.angular.io/assets/img/examples/shiba2.jpg');
   height:100%,
   }
 h1 {background-color: red;}
