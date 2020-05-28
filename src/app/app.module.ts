@@ -66,6 +66,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { ShowActorsComponent } from './show-actors/show-actors.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -84,6 +85,7 @@ import { ShowActorsComponent } from './show-actors/show-actors.component';
     AuthorsComponent,
     HomepageComponent,
     DisplayshowsComponent,
+    
     ],
   imports: [
     BrowserModule,
