@@ -25,14 +25,15 @@ interface IShowData {
 })
 export class ShowServiceService {
 
+
   constructor(private httpClient: HttpClient){}
 
-  getShows() {
-        return this.httpClient.get<IShowData[]>(
-      `http://api.tvmaze.com/shows`
-    ).pipe(
-      map(data => data.map((item) => this.transformToIShow(item))
-    ));
+  getShows(pageindex: number) {
+      return this.httpClient.get<IShowData[]>(
+        `http://api.tvmaze.com/shows?page=${pageindex}`
+      ).pipe(
+        map(data => data.map((item) => this.transformToIShow(item))
+      ));
   }
 
   transformToIShow(data: IShowData): IShow {
@@ -43,7 +44,8 @@ export class ShowServiceService {
       language: data.language,
       tvrageId: data.externals.tvrage,
       theTvDbId: data.externals.thetvdb,
-      image: data.image.medium,
+      image: data.image !=null ? data.image.medium : "https://dubsism.files.wordpress.com/2017/12/image-not-found.png",
+      //image: data.image.medium != null ? data.image.medium : "https://dubsism.files.wordpress.com/2017/12/image-not-found.png",
       duration: data.runtime,
       officialSite: data.officialSite,
     }

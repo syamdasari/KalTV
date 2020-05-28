@@ -65,8 +65,8 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ShowActorsComponent } from './show-actors/show-actors.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
-import { express } from 'express';
-// app.use(express.static('images'));
+//import { JwPaginationComponent } from 'jw-angular-pagination';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -86,7 +86,8 @@ import { express } from 'express';
     AuthorsComponent,
     HomepageComponent,
     DisplayshowsComponent,
-    SubscribeComponent,
+    SubscribeComponent
+    //JwPaginationComponent
     ],
   imports: [
     BrowserModule,
@@ -118,6 +119,8 @@ import { express } from 'express';
     LayoutModule,
     MatSelectModule,
     MatRadioModule,
+    NgxPaginationModule,
+   // JwPaginationComponent
 ],
 exports:[
   MatDialogModule,
@@ -159,6 +162,7 @@ exports:[
     ScrollingModule,
     MatStepperModule,
     LayoutModule,
+    //JwPaginationComponent
 ],
 
 
