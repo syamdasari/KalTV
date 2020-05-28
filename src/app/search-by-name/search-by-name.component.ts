@@ -22,5 +22,4 @@ search = new FormControl('',[Validators.minLength(3)]);
       }
     })
   }
-
 }

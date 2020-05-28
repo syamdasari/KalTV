@@ -1,0 +1,15 @@
+mat-table{
+
+  overflow:auto;
+}
+mat-cell{
+  color: #002699;
+}
+mat-cell:first-of-type {
+  font-weight: bold;
+}
+.mat-header-cell{
+  font-weight: bold;
+  color: #002699;
+  text-transform: uppercase;
+}

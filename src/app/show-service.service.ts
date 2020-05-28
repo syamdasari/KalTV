@@ -11,27 +11,26 @@ interface IShowData {
  language: string,
  name: string,
  runtime: number,
- externals : {
+ externals: {
    tvrage: number,
    thetvdb: number
  },
  image: {
   medium: string,
  },
- _links: {
-   self: string,
- }
+ officialSite: string,
 }
 @Injectable({
   providedIn: 'root'
 })
 export class ShowServiceService {
 
+
   constructor(private httpClient: HttpClient){}
 
-  getShows() {
+  getShows(pageindex: number) {
       return this.httpClient.get<IShowData[]>(
-        `http://api.tvmaze.com/shows`
+        `http://api.tvmaze.com/shows?page=${pageindex}`
       ).pipe(
         map(data => data.map((item) => this.transformToIShow(item))
       ));
@@ -45,9 +44,10 @@ export class ShowServiceService {
       language: data.language,
       tvrageId: data.externals.tvrage,
       theTvDbId: data.externals.thetvdb,
-      image: data.image.medium,
+      image: data.image !=null ? data.image.medium : "https://dubsism.files.wordpress.com/2017/12/image-not-found.png",
+      //image: data.image.medium != null ? data.image.medium : "https://dubsism.files.wordpress.com/2017/12/image-not-found.png",
       duration: data.runtime,
-      links: data._links.self,
+      officialSite: data.officialSite,
     }
   }
 }

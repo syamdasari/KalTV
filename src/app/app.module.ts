@@ -64,7 +64,10 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import {MatStepperModule} from '@angular/material/stepper';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ShowActorsComponent } from './show-actors/show-actors.component';
-
+import { SubscribeComponent } from './subscribe/subscribe.component';
+import { ScheduleSelectCountryComponent } from './schedule-select-country/schedule-select-country.component';
+//import { JwPaginationComponent } from 'jw-angular-pagination';
+//import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -85,7 +88,12 @@ import { ShowActorsComponent } from './show-actors/show-actors.component';
     AuthorsComponent,
     HomepageComponent,
     DisplayshowsComponent,
+<<<<<<< HEAD
     
+=======
+    SubscribeComponent,
+    ScheduleSelectCountryComponent
+>>>>>>> 4c09e83abe75e0258e59eaecc28485189bea104e
     ],
   imports: [
     BrowserModule,

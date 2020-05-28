@@ -1,45 +1,42 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {environment} from '../environments/environment';
-import { IShowImages } from './ishow-images';
+import { IShowImage } from './ishow-images';
 import { map } from 'rxjs/operators';
-
 interface IShowSampleImagesData {
-  shows:
-  [
-    {
-      id: number,
-      type: string,
-      resolution: {
-          original: {
-                url: string;
-            }
-     }
-    }
-  ];
+  id: number;
+  name: string;
+  url: string;
+  image: {
+    medium: string
+  };
+  summary: string;
 }
 @Injectable({
   providedIn: 'root'
 })
 
 export class ShowSampleImagesService {
-
   constructor(private httpClient: HttpClient) {
-
   }
 
   getShowImage(){
-   return this.httpClient.get<IShowSampleImagesData>(
-      `${environment.baseUrl}api.tvmaze.com/shows/1/images&appid=${environment.appId}`
-   ).pipe(map(data => this.tranformToIShowImage(data)));
+   return this.httpClient.get<IShowSampleImagesData[]>(
+      `${environment.baseUrl}api.tvmaze.com/shows?appId=${environment.appId}`
+   ).pipe(
+       map(
+         data => data.map((item) => this.tranformToIShowImage(item))
+        )
+      );
   }
-
-  tranformToIShowImage(data: IShowSampleImagesData): IShowImages
+  tranformToIShowImage(data: IShowSampleImagesData): IShowImage
   {
       return {
-        showId: data.shows[0].id,
-        showImage: data.shows[0].resolution.original.url,
-        showDesc: 'Test'
+        showId: data.id,
+        showName: data.name,
+        showImage: data.image.medium,
+        showDesc: data.summary,
+        showUrl: data.url,
       };
   }
 }

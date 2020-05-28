@@ -1,4 +1,5 @@
-<table mat-table [dataSource]="showDetails" class="mat-elevation-z8">
+<div>
+<table mat-table [dataSource]="showDetails" class="mat-elevation-z8" width = 100%>
   <!-- Show Name Column -->
 <ng-container matColumnDef="id">
   <mat-header-cell *matHeaderCellDef> Id </mat-header-cell>
@@ -26,27 +27,31 @@
 <!-- URL Column -->
 <ng-container matColumnDef="showUrl">
   <mat-header-cell *matHeaderCellDef> Show Link </mat-header-cell>
-  <mat-cell *matCellDef="let show" [innerHTML]="show.showUrl">
-    <a href='{{show.showUrl}}'>{{show.name}</a>
+  <mat-cell *matCellDef="let show">
+    <a target="_blank" href='{{show.showUrl}}'>{{show.name}}</a>
   </mat-cell>
 </ng-container>
 
-<!-- URL Column -->
+<!-- Language Column -->
 <ng-container matColumnDef="language">
-  <mat-header-cell *matHeaderCellDef> language </mat-header-cell>
+  <mat-header-cell *matHeaderCellDef> Language </mat-header-cell>
   <mat-cell *matCellDef="let show"> {{show.language}} </mat-cell>
 </ng-container>
 
-<ng-container matColumnDef="links">
-  <mat-header-cell *matHeaderCellDef> Links </mat-header-cell>
-  <mat-cell *matCellDef="let show"> {{show.links}} </mat-cell>
+<!-- Links  Column -->
+<ng-container matColumnDef="officialSite">
+  <mat-header-cell *matHeaderCellDef> Official Link </mat-header-cell>
+  <mat-cell *matCellDef="let show">
+    <a target="_blank"  href={{show.officialSite}}> {{show.name}}</a> </mat-cell>
 </ng-container>
 
+<!-- TVRageId Column-->
 <ng-container matColumnDef="tvrageId">
   <mat-header-cell *matHeaderCellDef> TVRageId </mat-header-cell>
   <mat-cell *matCellDef="let show"> {{show.tvrageId}} </mat-cell>
 </ng-container>
 
+<!--theTvDbId column -->
 <ng-container matColumnDef="theTvDbId">
   <mat-header-cell *matHeaderCellDef> theTvDbId </mat-header-cell>
   <mat-cell *matCellDef="let show"> {{show.theTvDbId}} </mat-cell>
@@ -54,4 +59,12 @@
 <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
 <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 </table>
-<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+<mat-paginator #paginator
+[length]="1000"
+[pageIndex]="0"
+[pageSize]="100"
+[pageSizeOptions]="[50,100,250]"
+(page)="pageEvent = getServerData($event)"
+>
+</mat-paginator>
+</div>

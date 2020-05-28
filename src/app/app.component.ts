@@ -29,6 +29,7 @@ export class AppComponent {
         dialogConfig.autoFocus = true;
         this.dialog.open(DetailsDisplayComponent, dialogConfig);
   }
+  
 }
 
 

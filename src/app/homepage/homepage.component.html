@@ -1,7 +1,7 @@
 <head>
 <style >
 body{
-  background-image: url('../images/Nature.jpg');
+  background-image: url('assets/Nature.jpg');
 }
 
 h1 {
@@ -18,19 +18,12 @@ p {
 </head>
 <body>
   <table>
-    <tr>
-     <h1>
-        Welcome to MIGS Entertainment service
-      </h1>
-  </tr>
   <tr>
       <app-sample-shows></app-sample-shows>
    </tr>
-   <tr>
-    <h1>TV Shows</h1>
-    <div style="font-size:15px; line-height:30px;">
-      <button mat-button (click)="openDialog()">CLICK HERE!!! to Search by Show Name</button>
-    </div>
-    </tr>
 </table>
+<h1>TV Shows</h1>
+<div style="font-size:15px; line-height:30px;">
+  <button mat-button (click)="openDialog()">CLICK HERE!!! to Search by Show Name</button>
+</div>
 </body>
