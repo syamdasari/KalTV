@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-authors',
   templateUrl: './authors.component.html',
@@ -7,9 +6,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthorsComponent implements OnInit {
 
-  constructor() { }
+  authors = [
 
+    {
+     name: 'MeghaMala Karnati',
+     image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+     summary:'Fullstack developer with eagerness to learn and contribute to the projects.',
+     linkedInProfile : 'https://www.linkedin.com/in/meghamala-karnati-62002baa/'
+     },
+    {
+      name: 'Iryna',
+      image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+      summary:'Fullstack developer with eagerness to learn and contribute to the projects.',
+      linkedInProfile : ''
+    },
+    {
+    name: 'Gnana Deepika',
+    image: 'assets/Gnana.jpg',
+    summary:'Fullstack developer with eagerness to learn and contribute to the projects.',
+    linkedInProfile : 'https://www.linkedin.com/in/gnana-deepika-bandaru-5878b79a'  },
+    {
+      name: 'Syam Kiran Dasari',
+      image: 'assets/SyamDasari.jpg',
+      summary:'Fullstack developer with eagerness to learn and contribute to the projects.',
+      linkedInProfile : 'https://www.linkedin.com/in/syam-kiran-dasari-53368a2/'
+    }
+    ]
+  constructor() { }
   ngOnInit(): void {
   }
-
 }

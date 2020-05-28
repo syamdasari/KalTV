@@ -1,64 +1,18 @@
-<mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Megamala Karnati</mat-card-title>
-    <mat-card-subtitle>Fullstack developer</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a megamala">
-  <mat-card-content>
-    <p>
-      Fullstack developer with eagerness to learn and contribute to the projects.
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button> <a href='https://www.linkedin.com/in/meghamala-karnati-62002baa/'> Profile </a></button>
-  </mat-card-actions>
+<table>
+  <tr>
+  <td *ngFor="let author of authors">
+  <div class="gallery">
+    <mat-card>
+      <mat-card-title > {{author.name}}</mat-card-title>
+      <mat-card-subtitle>{{author.summary}}</mat-card-subtitle>
+    <a target="_blank" href="{{author.linkedInProfile}}">
+      <img mat-card-image src={{author.image}} alt={{author.name}}>
+    </a>
+    </mat-card>
 
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title> Iryna</mat-card-title>
-    <mat-card-subtitle>Fullstack developer</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a megamala">
-  <mat-card-content>
-    <p>
-      Fullstack developer with eagerness to learn and contribute to the projects.
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Gnana deepika </mat-card-title>
-    <mat-card-subtitle>Fullstack developer</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a megamala">
-  <mat-card-content>
-    <p>
-      Fullstack developer with eagerness to learn and contribute to the projects.
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button> <a href='https://www.linkedin.com/in/gnana-deepika-bandaru-5878b79a/'> Profile </a></button>
-  </mat-card-actions>
+  </div>
+  </td>
+  </tr>
+  </table>
 
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Syam Kiran Dasari </mat-card-title>
-    <mat-card-subtitle>Fullstack developer</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a megamala">
-  <mat-card-content>
-    <p>
-      Fullstack developer with eagerness to learn and contribute to the projects.
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button><a href='https://www.linkedin.com/in/syam-kiran-dasari-53368a2/'>Profile</a></button>
-  </mat-card-actions>
-</mat-card>
+
