@@ -87,7 +87,6 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
     HomepageComponent,
     DisplayshowsComponent,
     SubscribeComponent
-    //JwPaginationComponent
     ],
   imports: [
     BrowserModule,
@@ -119,8 +118,6 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
     LayoutModule,
     MatSelectModule,
     MatRadioModule,
-    //NgxPaginationModule,
-   // JwPaginationComponent
 ],
 exports:[
   MatDialogModule,
@@ -162,7 +159,6 @@ exports:[
     ScrollingModule,
     MatStepperModule,
     LayoutModule,
-    //JwPaginationComponent
 ],
 
 

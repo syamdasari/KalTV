@@ -16,7 +16,7 @@ pageSize:number;
 length:number;
   //@Input() currentdata: IShow;
  @Output() PageEvent = new EventEmitter<string>();
- displayedColumns: string[] = ['id', 'name', 'image', 'duration','showUrl', 'language', 'tvrageId', 'theTvDbId', 'links'];
+ displayedColumns: string[] = ['id', 'name', 'image', 'duration','showUrl', 'language', 'tvrageId', 'theTvDbId'];
   showDetails: IShow[];
   constructor(private showService: ShowServiceService){
   }
