@@ -66,7 +66,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { ShowActorsComponent } from './show-actors/show-actors.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 //import { JwPaginationComponent } from 'jw-angular-pagination';
-import { NgxPaginationModule } from 'ngx-pagination';
+//import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -119,7 +119,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     LayoutModule,
     MatSelectModule,
     MatRadioModule,
-    NgxPaginationModule,
+    //NgxPaginationModule,
    // JwPaginationComponent
 ],
 exports:[
