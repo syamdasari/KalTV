@@ -13,11 +13,7 @@ export class TvShowsDisplayComponent implements OnInit {
   @Input() currentdata: IarrayTvShowsDisplay;
  @Input() itemNotFound: string;
  displayedColumns: string[] = ['name', 'language', 'scheduleDays', 'scheduleTime','image', 'url'];
-
   constructor(private tvshowservice: TvShowService) { }
-
   ngOnInit(): void {
-
   }
-
 }

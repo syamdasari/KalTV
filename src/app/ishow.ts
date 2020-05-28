@@ -7,5 +7,5 @@ export interface IShow {
   image: string;
   duration: number;
   language: string;
-  links: string;
+  officialSite: string;
 }

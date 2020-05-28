@@ -8,16 +8,12 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./displayshows.component.css']
 })
 export class DisplayshowsComponent implements OnInit {
-  search = new FormControl();
-
-  showDetails: IShow[]
-
-  displayedColumns: string[] = ['id', 'name', 'image', 'duration','showUrl', 'language', 'tvrageId', 'theTvDbId', 'links'];
+  showDetails: IShow[];
+  displayedColumns: string[] = ['id', 'name', 'image', 'duration','showUrl', 'language', 'tvrageId', 'theTvDbId', 'officialSite'];
 
   constructor(private showService: ShowServiceService){
   }
   ngOnInit() : void {
     this.showService.getShows().subscribe(data => this.showDetails = data);
   }
-
 }

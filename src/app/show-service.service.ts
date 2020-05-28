@@ -11,16 +11,14 @@ interface IShowData {
  language: string,
  name: string,
  runtime: number,
- externals : {
+ externals: {
    tvrage: number,
    thetvdb: number
  },
  image: {
   medium: string,
  },
- _links: {
-   self: string,
- }
+ officialSite: string,
 }
 @Injectable({
   providedIn: 'root'
@@ -30,11 +28,11 @@ export class ShowServiceService {
   constructor(private httpClient: HttpClient){}
 
   getShows() {
-      return this.httpClient.get<IShowData[]>(
-        `http://api.tvmaze.com/shows`
-      ).pipe(
-        map(data => data.map((item) => this.transformToIShow(item))
-      ));
+        return this.httpClient.get<IShowData[]>(
+      `http://api.tvmaze.com/shows`
+    ).pipe(
+      map(data => data.map((item) => this.transformToIShow(item))
+    ));
   }
 
   transformToIShow(data: IShowData): IShow {
@@ -47,7 +45,7 @@ export class ShowServiceService {
       theTvDbId: data.externals.thetvdb,
       image: data.image.medium,
       duration: data.runtime,
-      links: data._links.self,
+      officialSite: data.officialSite,
     }
   }
 }

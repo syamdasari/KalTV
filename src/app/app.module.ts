@@ -65,7 +65,8 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ShowActorsComponent } from './show-actors/show-actors.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
-
+import { express } from 'express';
+// app.use(express.static('images'));
 
 @NgModule({
   declarations: [

@@ -1,16 +1,15 @@
 <head>
   <style >
     body{
-      background-image: url('https://material.angular.io/assets/img/examples/shiba2.jpg')
-       /* background-image: url('./Nature.jpg'); */
+       /* background-image: url('https://material.angular.io/assets/img/examples/shiba2.jpg'); */
+       
+       background-image: url('./Nature.jpg');
     }
-
     h1 {
       background-color: blue;
       color: rgb(218, 233, 218);
       text-align: center;
     }
-
     p {
       font-family: verdana;
       font-size: 20px;
@@ -20,12 +19,6 @@
 <body>
 <div style="text-align: center;">
   <mat-tab-group>
-    <mat-tab label="Name Search">
-      <h1>TV Shows</h1>
-      <div style="font-size:15px; line-height:30px;">
-        <button mat-button (click)="openDialog()">CLICK HERE!!! to Search by Show Name</button>
-      </div>
-    </mat-tab>
     <mat-tab label="Home">
       <h1>Home </h1>
       <div style="font-size:15px; line-height:30px;">
@@ -39,7 +32,6 @@
       <div style="font-size:15px; line-height:30px;">
         <div>
           <app-displayshows></app-displayshows>
-
         </div>
         </div>
       </mat-tab>
@@ -73,7 +65,3 @@
 </footer>
 </div>
 </body>
-
-
-
-
