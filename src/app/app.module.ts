@@ -65,6 +65,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ShowActorsComponent } from './show-actors/show-actors.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
+import { ScheduleSelectCountryComponent } from './schedule-select-country/schedule-select-country.component';
 //import { JwPaginationComponent } from 'jw-angular-pagination';
 //import { NgxPaginationModule } from 'ngx-pagination';
 
@@ -86,7 +87,8 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
     AuthorsComponent,
     HomepageComponent,
     DisplayshowsComponent,
-    SubscribeComponent
+    SubscribeComponent,
+    ScheduleSelectCountryComponent
     ],
   imports: [
     BrowserModule,
