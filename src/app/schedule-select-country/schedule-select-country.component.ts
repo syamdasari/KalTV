@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScheduleSelectCountryComponent implements OnInit {
 
+    countries =   [
+    {value: "AU", viewValue: "Australia"},
+    {value: "JP", viewValue: "Japan"},
+    {value: "NZ", viewValue: "New Zealand"},
+    {value: "RU", viewValue: "Russian Federation"},
+    {value: "GB", viewValue: "United Kingdom"},
+    {value: "US", viewValue: "United States"}
+  ]
+  defaultCountry = this.countries[5].value;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSelect(event) {
+    console.log(event)
   }
 
 }
