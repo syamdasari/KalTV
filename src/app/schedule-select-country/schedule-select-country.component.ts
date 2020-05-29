@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-schedule-select-country',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./schedule-select-country.component.css']
 })
 export class ScheduleSelectCountryComponent implements OnInit {
+
+  @Output() countrySelect = new EventEmitter<string>();
 
     countries =   [
     {value: "AU", viewValue: "Australia"},
@@ -23,7 +25,10 @@ export class ScheduleSelectCountryComponent implements OnInit {
   }
 
   onSelect(event) {
-    console.log(event)
+    
+    console.log(event.value)
+
+    this.countrySelect.next(event.value)
   }
 
 }

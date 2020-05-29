@@ -26,6 +26,10 @@ export class ScheduleComponent implements OnInit {
 
   }
 
+  onCountrySelect(countryCode){
+    console.log(countryCode)
+
+  }
 }
 
 
