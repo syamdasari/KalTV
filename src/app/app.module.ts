@@ -88,12 +88,8 @@ import { ScheduleSelectCountryComponent } from './schedule-select-country/schedu
     AuthorsComponent,
     HomepageComponent,
     DisplayshowsComponent,
-<<<<<<< HEAD
-    
-=======
     SubscribeComponent,
     ScheduleSelectCountryComponent
->>>>>>> 4c09e83abe75e0258e59eaecc28485189bea104e
     ],
   imports: [
     BrowserModule,
