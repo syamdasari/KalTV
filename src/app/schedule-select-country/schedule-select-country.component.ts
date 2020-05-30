@@ -11,13 +11,10 @@ export class ScheduleSelectCountryComponent implements OnInit {
 
     countries =   [
     {value: "AU", viewValue: "Australia"},
-    {value: "JP", viewValue: "Japan"},
-    {value: "NZ", viewValue: "New Zealand"},
-    {value: "RU", viewValue: "Russian Federation"},
     {value: "GB", viewValue: "United Kingdom"},
     {value: "US", viewValue: "United States"}
   ]
-  defaultCountry = this.countries[5].value;
+  defaultCountry = this.countries[2].value;
 
   constructor() { }
 
@@ -25,7 +22,7 @@ export class ScheduleSelectCountryComponent implements OnInit {
   }
 
   onSelect(event) {
-    
+
     console.log(event.value)
 
     this.countrySelect.next(event.value)

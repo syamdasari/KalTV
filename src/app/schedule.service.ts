@@ -37,7 +37,7 @@ export class ScheduleService implements IScheduleService {
 
   transformToISchedule(data: IScheduleData) : ISchedule{
     return {
-      showName: data.name,
+      showName: data.name.split('/').every(Number) ? ' ' : data.name,
       airtime: data.airtime,
       networkName: data?.show?.network?.name,
       summary: data.summary,
