@@ -62,7 +62,6 @@ import {MatTreeModule} from '@angular/material/tree';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import {MatStepperModule} from '@angular/material/stepper';
 import { LayoutModule } from '@angular/cdk/layout';
-import { ShowActorsComponent } from './show-actors/show-actors.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { ScheduleSelectCountryComponent } from './schedule-select-country/schedule-select-country.component';
 import { ShowSearchComponent } from './show-search/show-search.component';
