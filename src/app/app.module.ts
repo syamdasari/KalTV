@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { TvShowsDisplayComponent } from './tv-shows-display/tv-shows-display.component';
 import { TvShowService } from './tv-show.service';
 import { HttpClientModule } from '@angular/common/http';
-import { ContactPageComponent } from './contact-page/contact-page.component';
 import { SampleShowsComponent } from './sample-shows/sample-shows.component';
 import { SearchByNameComponent } from './search-by-name/search-by-name.component';
 import { ScheduleComponent } from './schedule/schedule.component';
@@ -66,6 +65,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { ShowActorsComponent } from './show-actors/show-actors.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { ScheduleSelectCountryComponent } from './schedule-select-country/schedule-select-country.component';
+import { ShowSearchComponent } from './show-search/show-search.component';
 //import { JwPaginationComponent } from 'jw-angular-pagination';
 //import { NgxPaginationModule } from 'ngx-pagination';
 
@@ -74,7 +74,6 @@ import { ScheduleSelectCountryComponent } from './schedule-select-country/schedu
   declarations: [
     AppComponent,
     TvShowsDisplayComponent,
-    ContactPageComponent,
     SampleShowsComponent,
     SearchByNameComponent,
     ScheduleComponent,
@@ -89,7 +88,8 @@ import { ScheduleSelectCountryComponent } from './schedule-select-country/schedu
     HomepageComponent,
     DisplayshowsComponent,
     SubscribeComponent,
-    ScheduleSelectCountryComponent
+    ScheduleSelectCountryComponent,
+    ShowSearchComponent
     ],
   imports: [
     BrowserModule,
