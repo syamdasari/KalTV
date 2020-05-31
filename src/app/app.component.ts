@@ -14,6 +14,7 @@ import { DetailsDisplayComponent } from './details-display/details-display.compo
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'tvshow-app';
   tvshowsdisplay: IarrayTvShowsDisplay;
@@ -21,15 +22,18 @@ export class AppComponent {
   errorMessage:string;
 
   constructor(public dialog: MatDialog){}
+
   openDialog()
   {
-
     const dialogConfig = new MatDialogConfig();
     //dialogConfig.disableClose = true;
         dialogConfig.autoFocus = true;
         this.dialog.open(DetailsDisplayComponent, dialogConfig);
   }
-  
+
+  doSearch(searchValue){
+    console.log(" search value is ${searchValue}")
+  }
 }
 
 

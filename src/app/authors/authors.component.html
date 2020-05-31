@@ -1,7 +1,9 @@
 <table>
   <tr>
   <td *ngFor="let author of authors">
-  <div class="gallery">
+  <div class="gallery" flxLayout = "row">
+    <div fvflex></div>
+    <div fvFlex ="300px">
     <mat-card>
       <mat-card-title > {{author.name}}</mat-card-title>
       <mat-card-subtitle>{{author.summary}}</mat-card-subtitle>
@@ -9,7 +11,7 @@
       <img mat-card-image src={{author.image}} alt={{author.name}}>
     </a>
     </mat-card>
-
+    </div>
   </div>
   </td>
   </tr>
