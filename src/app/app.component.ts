@@ -6,13 +6,15 @@ import { subscribeOn } from 'rxjs/operators';
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import { TvShowsDisplayComponent } from './tv-shows-display/tv-shows-display.component';
 import { DetailsDisplayComponent } from './details-display/details-display.component';
+import { ViewEncapsulation} from '@angular/core';
 
 
 
   @Component({
     selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 
 export class AppComponent {
