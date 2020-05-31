@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import {IShow} from './Ishow'
+import {IShow} from './ishow'
 
 export interface IShowService {
   getShows(pageindex: number): Observable<IShow[]>;

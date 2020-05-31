@@ -34,7 +34,7 @@ import {HomepageComponent} from './homepage/homepage.component'
 import { CommonModule } from '@angular/common';
 import { DisplayshowsComponent } from './displayshows/displayshows.component';
 import {ShowServiceService} from './show-service.service';
-import {FlexLayoutModule} from '@Angular/flex-layout';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
