@@ -1,9 +1,18 @@
 body {
     height:100%,
   }
-/* h1 {background-color: red;}  */
-/*p {color: blue;}*/
-
+h2 {
+  background-color: #ff002b;
+ color: rgb(19, 17, 17);
+ text-align: center;
+}
+p {
+ font-family: verdana;
+ font-size: 20px;
+}
+footer {
+ color: white
+}
 .example-container {
   width: 400px;
   height: 200px;
@@ -53,4 +62,7 @@ mat-divider{
 
 .footer a{
   color: #ff002b;
+}
+h4{
+  color:gray;
 }

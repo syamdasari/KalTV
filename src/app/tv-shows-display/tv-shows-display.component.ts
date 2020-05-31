@@ -3,6 +3,7 @@ import { IarrayTvShowsDisplay } from '../itv-shows-display';
 import { TvShowService } from '../tv-show.service';
 import { ITvShowService } from '../itv-show-service';
 import { CommonModule } from '@angular/common';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-tv-shows-display',

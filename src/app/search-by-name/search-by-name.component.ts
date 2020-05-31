@@ -9,7 +9,8 @@ import { debounceTime } from'rxjs/operators';
   styleUrls: ['./search-by-name.component.css']
 })
 export class SearchByNameComponent implements OnInit {
-  @Output() searchEvent = new EventEmitter<string>();
+
+@Output() searchEvent = new EventEmitter<string>();
 search = new FormControl('',[Validators.minLength(3)]);
   constructor(private tvshowService: TvShowService) { }
 
@@ -19,6 +20,9 @@ search = new FormControl('',[Validators.minLength(3)]);
     .subscribe((searchValue: string) => {
       if(!this.search.invalid && searchValue){
         this.searchEvent.emit(searchValue);
+      }
+      if(this.search.invalid){
+        this.searchEvent.emit('invalid');
       }
     })
   }
