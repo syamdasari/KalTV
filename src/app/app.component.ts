@@ -16,6 +16,7 @@ import { ViewEncapsulation} from '@angular/core';
   styleUrls: ['./app.component.css'],
   encapsulation: ViewEncapsulation.None
 })
+
 export class AppComponent {
   title = 'tvshow-app';
   tvshowsdisplay: IarrayTvShowsDisplay;
@@ -23,15 +24,18 @@ export class AppComponent {
   errorMessage:string;
 
   constructor(public dialog: MatDialog){}
+
   openDialog()
   {
-
     const dialogConfig = new MatDialogConfig();
     //dialogConfig.disableClose = true;
         dialogConfig.autoFocus = true;
         this.dialog.open(DetailsDisplayComponent, dialogConfig);
   }
 
+  doSearch(searchValue){
+    console.log(" search value is ${searchValue}")
+  }
 }
 
 

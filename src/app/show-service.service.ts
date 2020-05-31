@@ -3,7 +3,8 @@ import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { IShow } from './ishow';
 import { map } from 'rxjs/operators';
-
+import { IShowService} from './ishow-service'
+import { NumberValueAccessor } from '@angular/forms';
 interface IShowData {
 
  id: number,
@@ -20,14 +21,30 @@ interface IShowData {
  },
  officialSite: string,
 }
+
+interface ISearchData {
+  show:
+  {
+    id: number,
+    url: string,
+    name: string,
+    language: string,
+    runtime: number,
+    externals: {
+      tvrage: number,
+      thetvdb: number
+    },
+    image: {
+      medium: string,
+    }
+    officalSite: string
+  }
+}
 @Injectable({
   providedIn: 'root'
 })
-export class ShowServiceService {
-
-
+export class ShowServiceService implements IShowService{
   constructor(private httpClient: HttpClient){}
-
   getShows(pageindex: number) {
       return this.httpClient.get<IShowData[]>(
         `http://api.tvmaze.com/shows?page=${pageindex}`
@@ -35,7 +52,13 @@ export class ShowServiceService {
         map(data => data.map((item) => this.transformToIShow(item))
       ));
   }
-
+  getShowsByName(name: string) {
+    return this.httpClient.get<IShowData[]>(
+      `http://api.tvmaze.com/shows?q=${name}`
+    ).pipe(
+      map(data => data.map((item) => this.transformToIShow(item))
+    ));
+  }
   transformToIShow(data: IShowData): IShow {
     return {
       id: data.id,

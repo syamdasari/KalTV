@@ -9,6 +9,9 @@
       font-family: verdana;
       font-size: 20px;
     }
+    footer {
+      color: white
+    }
     </style>
 </head>
 <body>
@@ -35,7 +38,7 @@
         <h2>Shows </h2>
         <div style="font-size:15px; line-height:30px;">
           <div>
-            <app-show-search></app-show-search>
+            <app-show-search (searchEvent)="doSearch($event)"></app-show-search>
             <app-displayshows></app-displayshows>
           </div>
         </div>
@@ -67,7 +70,8 @@
     <h4 style="color: yellowgreen; font-size: x-large;">Unlimited movies, TV shows,  <br/> and more. <br/> Watch anywhere. Cancel anytime.</h4>
     <h1><app-subscribe></app-subscribe></h1>
     <footer>
-      <p class="footer">Contact : <a href="mailto:teamrockers@example.com">teamrockers@example.com</a></p>
+<b><p class="footer">Contact : <a href="mailto:teamrockers@example.com">teamrockers@example.com</a></p></b>
+
     </footer>
   </div>
 
