@@ -1,5 +1,10 @@
 
 .CountrySelection{
+  justify-content: center;
+  align-items: center;
+
+  width: 300px;
   background-color: red;
   align-self: center;
+
 }
