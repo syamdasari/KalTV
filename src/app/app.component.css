@@ -1,8 +1,7 @@
 body {
-  /* background-image: url('https://material.angular.io/assets/img/examples/shiba2.jpg'); */
     height:100%,
   }
-h1 {background-color: red;}
+/* h1 {background-color: red;}  */
 p {color: blue;}
 
 .example-container {
@@ -10,4 +9,49 @@ p {color: blue;}
   height: 200px;
   margin: 10px;
   border: 1px solid #555;
+}
+.tab-heading{
+  color:wheat;
+}
+
+.mat-tab-label-container{
+  width: 100%;
+}
+.mat-tab-labels{
+  padding-left: 60px;;
+}
+#mat-tab-label-0-0{
+  background-color:#ff002b;
+}
+
+#mat-tab-label-0-1{
+  background-color:#ff002b;
+}
+#mat-tab-label-0-2{
+  background-color:#ff002b;
+}
+#mat-tab-label-0-3{
+  background-color:#ff002b;
+}
+#mat-tab-label-0-4{
+  background-color:#ff002b;
+}
+#mat-tab-label-0-5{
+  background-color:#ff002b;
+}
+#mat-tab-label-0-6{
+  background-color:#ff002b;
+}
+#mat-tab-label-0-7{
+  background-color:#ff002b ;
+}
+mat-divider{
+  color: tomato;
+}
+p{
+  color:red;
+}
+
+p a{
+  color: #ff002b;
 }
