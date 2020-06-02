@@ -1,13 +1,15 @@
+<div class='SearchName'>
 <form>
-  <mat-form-field>
+  <mat-form-field class='SearchName'>
     <mat-icon matSuffix>search</mat-icon>
-      <input style="font-size: 15px;" matInput placeholder="Enter Show name" aria-label="showname" [formControl]="search" />
+      <input style="font-size: 15px;" matInput placeholder="Show name" aria-label="showname" [formControl]="search" />
     <mat-error *ngIf="search.invalid">
       Type 3 or more characters to search
     </mat-error>
   </mat-form-field>
   <ng-template></ng-template>
 </form>
+</div>
 
 
 

@@ -1,10 +1,10 @@
 <form>
   <mat-form-field>
     <mat-icon matSuffix>search</mat-icon>
-      <input style="font-size: 15px;" matInput placeholder="Enter Showname" aria-label="showname" [formControl]="search" />
+      <input style="font-size: 15px;background-color:yellow" matInput placeholder="Enter Show name" aria-label="showname" [formControl]="search" />
     <mat-hint> Specify the name of show to search with</mat-hint>
     <mat-error *ngIf="search.invalid">
-      Type 3 or more characters to search
+      Type 3 or more characters to search for a show
     </mat-error>
   </mat-form-field>
   <ng-template></ng-template>

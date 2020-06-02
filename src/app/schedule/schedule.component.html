@@ -1,20 +1,3 @@
-<!-- <table border="1">
-    <tr>
-    <td>Show Name</td>
-    <td>Airtime</td>
-    <td>Network</td>
-    <td>Image</td>
-    <td>Summary</td>
-  </tr>
-  <tr *ngFor="let show of localData">
-    <td>{{show.showName}}</td>
-    <td>{{show.airtime}}</td>
-    <td>{{show.networkName}}</td>
-    <td><img *ngIf="show.image" src="{{show.image}}" alt="{{show.showName}}"></td>
-    <td [innerHTML]="show.summary"></td>
-  </tr>
-</table> -->
-
 <app-schedule-select-country (countrySelect) = "onCountrySelect($event)" fxLayoutAlign="center"></app-schedule-select-country>
 <br>
 
