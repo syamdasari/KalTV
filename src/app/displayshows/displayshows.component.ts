@@ -10,19 +10,21 @@ import { PageEvent } from '@angular/material/paginator';
 })
 export class DisplayshowsComponent implements OnInit {
   pageEvent: PageEvent;
-datasource: null;
-indexnumber: number;
-pageSize: number;
-length: number;
+  datasource: null;
+  indexnumber: number;
+  pageSize: number;
+  length: number;
   //@Input() currentdata: IShow;
+ @Input() showDetails: IShow[];
  @Output() PageEvent = new EventEmitter<string>();
  displayedColumns: string[] = ['id', 'name', 'image', 'duration', 'showUrl', 'language', 'tvrageId', 'theTvDbId', 'officialSite'];
-  showDetails: IShow[];
+  // showDetails: IShow[];
   constructor(private showService: ShowServiceService){
   }
   ngOnInit() : void {
     this.getServerData(null)
   }
+
   public getServerData(event?: PageEvent)
   {
      if (event === null)

@@ -7,8 +7,8 @@ import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import { TvShowsDisplayComponent } from './tv-shows-display/tv-shows-display.component';
 import { DetailsDisplayComponent } from './details-display/details-display.component';
 import { ViewEncapsulation} from '@angular/core';
-
-
+import { IShow } from './ishow';
+import { ShowServiceService } from './show-service.service';
 
   @Component({
     selector: 'app-root',
@@ -20,11 +20,10 @@ import { ViewEncapsulation} from '@angular/core';
 export class AppComponent {
   title = 'tvshow-app';
   tvshowsdisplay: IarrayTvShowsDisplay;
-
+  showDetails: IShow[];
   errorMessage:string;
 
-  constructor(public dialog: MatDialog){}
-
+  constructor(public dialog: MatDialog, private showService: ShowServiceService){}
   openDialog()
   {
     const dialogConfig = new MatDialogConfig();
@@ -34,7 +33,9 @@ export class AppComponent {
   }
 
   doSearch(searchValue){
-    console.log(" search value is ${searchValue}")
+    console.log(` search value is ${searchValue}`)
+    this.showService.getShowsByName(searchValue)
+      .subscribe(data => this.showDetails = data);
   }
 }
 

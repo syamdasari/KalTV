@@ -1,4 +1,4 @@
-<div>
+<div *ngIf='showDetails else elseBlock'>
 <table mat-table [dataSource]="showDetails" class="mat-elevation-z8" width = 100%>
   <!-- Show Name Column -->
 <ng-container matColumnDef="id">
@@ -67,4 +67,9 @@
 (page)="pageEvent = getServerData($event)"
 >
 </mat-paginator>
+</div>
+<div>
+  <div>
+    <ng-template #elseBlock>Will display items</ng-template>
+  </div>
 </div>

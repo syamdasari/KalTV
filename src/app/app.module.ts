@@ -35,6 +35,7 @@ import { CommonModule } from '@angular/common';
 import { DisplayshowsComponent } from './displayshows/displayshows.component';
 import {ShowServiceService} from './show-service.service';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { IShowService} from './ishow-service';
 
 
 

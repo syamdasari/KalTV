@@ -8,9 +8,6 @@
             <app-homepage></app-homepage>
           </div>
         </div>
-      </mat-tab>
-      <mat-tab class="tab-heading" label="Name Search">
-        <h2>Name Search</h2>
         <div style="font-size:15px; line-height:30px;">
           <br>
           <div>
@@ -23,7 +20,7 @@
         <div style="font-size:15px; line-height:30px;">
           <div>
             <app-show-search (searchEvent)="doSearch($event)"></app-show-search>
-            <app-displayshows></app-displayshows>
+            <app-displayshows [showDetails]='showDetails'></app-displayshows>
           </div>
         </div>
       </mat-tab>
@@ -51,11 +48,12 @@
     <mat-divider></mat-divider>
     <br>
     <br>
-    <h4 style="font-size: x-large;">Unlimited movies, TV shows,  <br/> and more. <br/> Watch anywhere. Cancel anytime.</h4>
+    <h3 style="font-size: x-large;"> Unlimited movies, TV shows,  <br/> and more. <br/></h3>
+    <h4> Watch anywhere. Cancel anytime.</h4>
     <h1><app-subscribe></app-subscribe></h1>
     <footer>
-<b><p class="footer">Contact : <a href="mailto:teamrockers@example.com">teamrockers@example.com</a></p></b>
-
+      <b><p class="footer">Contact : <a href="mailto:teamrockers@example.com">teamrockers@example.com</a></p></b>
     </footer>
+    <mat-divider></mat-divider>
   </div>
 </body>

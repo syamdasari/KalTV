@@ -26,7 +26,6 @@ export class HomepageComponent implements OnInit {
   {
 
     const dialogConfig = new MatDialogConfig();
-    //dialogConfig.disableClose = true;
         dialogConfig.autoFocus = true;
         this.dialog.open(DetailsDisplayComponent, dialogConfig);
   }

@@ -51,14 +51,26 @@ export class ShowServiceService implements IShowService{
       ).pipe(
         map(data => data.map((item) => this.transformToIShow(item))
       ));
+      console.log(' Generic list is called');
   }
+
   getShowsByName(name: string) {
-    return this.httpClient.get<IShowData[]>(
-      `http://api.tvmaze.com/shows?q=${name}`
+    if (name != null && name != '') {
+    return this.httpClient.get<ISearchData[]>(
+      `http://api.tvmaze.com/search/shows?q=${name}`
     ).pipe(
-      map(data => data.map((item) => this.transformToIShow(item))
+      map(data => data.map((item) => this.transformSearchToIShow(item))
     ));
+    } else {
+      return this.httpClient.get<IShowData[]>(
+        `http://api.tvmaze.com/search/shows?q=girls`
+      ).pipe(
+        map(data => data.map((item) => this.transformToIShow(item))
+      ));
+    }
+
   }
+
   transformToIShow(data: IShowData): IShow {
     return {
       id: data.id,
@@ -68,9 +80,21 @@ export class ShowServiceService implements IShowService{
       tvrageId: data.externals.tvrage,
       theTvDbId: data.externals.thetvdb,
       image: data.image !=null ? data.image.medium : "https://dubsism.files.wordpress.com/2017/12/image-not-found.png",
-      //image: data.image.medium != null ? data.image.medium : "https://dubsism.files.wordpress.com/2017/12/image-not-found.png",
       duration: data.runtime,
       officialSite: data.officialSite,
+    }
+  }
+  transformSearchToIShow(data: ISearchData): IShow{
+    return {
+        id: data.show.id,
+        name: data.show.name,
+        showUrl: data.show.url,
+        tvrageId: data.show.externals.tvrage,
+        language: data.show.language,
+        theTvDbId: data.show.externals.thetvdb,
+        image: data.show.image != null ? data.show.image.medium : "https://dubsism.files.wordpress.com/2017/12/image-not-found.png",
+        duration: data.show.runtime,
+        officialSite: data.show.officalSite,
     }
   }
 }
