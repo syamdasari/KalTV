@@ -67,6 +67,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { ScheduleSelectCountryComponent } from './schedule-select-country/schedule-select-country.component';
 import { ShowSearchComponent } from './show-search/show-search.component';
+import { ShowPlansComponent } from './show-plans/show-plans.component';
 //import { JwPaginationComponent } from 'jw-angular-pagination';
 //import { NgxPaginationModule } from 'ngx-pagination';
 
@@ -90,7 +91,8 @@ import { ShowSearchComponent } from './show-search/show-search.component';
     DisplayshowsComponent,
     SubscribeComponent,
     ScheduleSelectCountryComponent,
-    ShowSearchComponent
+    ShowSearchComponent,
+    ShowPlansComponent
     ],
   imports: [
     BrowserModule,
