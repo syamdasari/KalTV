@@ -13,8 +13,16 @@ mat-header-cell {
   padding: 20px;
 }
 
+mat-cell {
+  display: block;
+}
+
 :host ::ng-deep .mat-column-summary p {
   text-align: left;
   font-size: 14px !important;
   font-family: auto;
+}
+
+.mat-column-summary {
+  padding: 20px;
 }
