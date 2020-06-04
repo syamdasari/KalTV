@@ -16,7 +16,7 @@ export class AuthorsComponent implements OnInit {
      },
     {
       name: 'Iryna',
-      image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+      image: 'assets/Iryna.jpg',
       summary:'Fullstack developer with eagerness to learn and contribute to the projects.',
       linkedInProfile : ''
     },
