@@ -10,9 +10,9 @@ export class AuthorsComponent implements OnInit {
 
     {
      name: 'MeghaMala Karnati',
-     image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+     image: 'assets/Megha.jpg',
      summary:'Fullstack developer with eagerness to learn and contribute to the projects.',
-     linkedInProfile : 'https://www.linkedin.com/in/meghamala-karnati-62002baa/'
+     linkedInProfile : 'https://www.linkedin.com/in/meghamala-karnati-32a6451ab/'
      },
     {
       name: 'Iryna',
